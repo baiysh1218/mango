@@ -1,12 +1,12 @@
-
 .navber-background {
   background-color: white;
 }
 .navbar-logo-block {
   display: flex;
   align-items: center;
-  margin-left: 5%;
+  margin-left: 2%;
   padding: 15px 0;
+  justify-content: center;
 }
 .navbar-block-icons {
   display: flex;
@@ -27,10 +27,18 @@
   justify-content: space-between;
 }
 .navbar-icon-p {
-  font-size: 13px;
+  font-size: 11px;
+  margin-top: -3px;
 }
 .navbar-icon-content-block {
   display: flex;
   flex-direction: column;
   margin-left: 7%;
+  justify-content: center;
+  align-items: center;
+}
+@media all and (max-width: 430px) {
+  .logo-mango-navbar {
+    width: 120px;
+  }
 }
