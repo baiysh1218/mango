@@ -13,7 +13,6 @@ const Header = () => {
     <div className="navber-background">
       <div className="container">
         <div className="navbar-block">
-          <div></div>
           <div className="navbar-logo-block">
             <img
               className="logo-mango-navbar"
