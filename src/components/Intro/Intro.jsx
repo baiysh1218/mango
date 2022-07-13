@@ -1,4 +1,10 @@
 import React from "react";
+import PreFooter from "../PreFooter/PreFooter";
+
+const Intro = () => {
+  return (
+    <div className="container">
+      <PreFooter />
 import Video from "../Media/pexels-taryn-elliott-5363146.mp4";
 import img1 from "../Media/medsummer-logo.svg";
 import "../Intro/Intro.css";
