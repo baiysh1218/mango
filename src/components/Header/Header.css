@@ -1,11 +1,10 @@
-
 .navber-background {
   background-color: white;
 }
 .navbar-logo-block {
   display: flex;
   align-items: center;
-  margin-left: 5%;
+  margin-left: 12%;
   padding: 15px 0;
 }
 .navbar-block-icons {
