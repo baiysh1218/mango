@@ -1,5 +1,8 @@
 .navber-background {
   background-color: white;
+  position: fixed;
+  z-index: 5;
+  width: 100%;
 }
 .navbar-logo-block {
   display: flex;
@@ -37,6 +40,7 @@
   justify-content: center;
   align-items: center;
 }
+
 @media all and (max-width: 430px) {
   .logo-mango-navbar {
     width: 120px;
