@@ -32,15 +32,19 @@ video {
 }
 
 .intro__btn {
- 
-  padding: 10px; 
-  margin-top: -15%;
+  padding: 10px;
+  /* margin-top: -70%; */
   z-index: 2;
   border: none;
 }
+.intro-btn-block {
+  margin-top: -80%;
+}
 
-
-@media (max-width: 780px) {
-    
-
+@media all and (max-width: 380px) {
+  .intro__btn {
+    margin-top: 10%;
+    padding: 1%;
+    width: 90%;
+  }
 }

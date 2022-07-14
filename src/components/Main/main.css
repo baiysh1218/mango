@@ -1,7 +1,7 @@
 .main__content {
   width: 100%;
   display: flex;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
 }
 
 .main__content_first,
@@ -9,7 +9,7 @@
   display: flex;
   justify-content: center;
   flex-direction: row;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   width: 100%;
   opacity: 1;
 }
@@ -51,7 +51,7 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  width: 524px;
+  width: 440px;
   margin: 1px;
 }
 
@@ -84,8 +84,11 @@
   margin-left: 20px;
   margin-bottom: 50px;
 }
-
-@media (max-width: 1330px) {
+.main-content-block {
+  display: flex;
+  flex-direction: column;
+}
+@media all and (max-width: 1330px) {
   .main__content_1,
   .main__content_2,
   .main__content_3,
@@ -93,10 +96,97 @@
   .main__content_5,
   .main__content_6 {
     width: 400px;
-    margin: 1px;
   }
 }
-
+@media all and (max-width: 1210px) {
+  .main__content_1,
+  .main__content_2,
+  .main__content_3,
+  .main__content_4,
+  .main__content_5,
+  .main__content_6 {
+    width: 350px;
+  }
+}
+@media all and (max-width: 1060px) {
+  .main__content_1,
+  .main__content_2,
+  .main__content_3,
+  .main__content_4,
+  .main__content_5,
+  .main__content_6 {
+    width: 300px;
+  }
+  .main__content_1 h1,
+  .main__content_2 h1,
+  .main__content_3 h1,
+  .main__content_4 h1,
+  .main__content_5 h1,
+  .main__content_6 h1 {
+    font-size: 32px;
+  }
+}
+@media all and (max-width: 910px) {
+  .main__content_1,
+  .main__content_2,
+  .main__content_3,
+  .main__content_4,
+  .main__content_5,
+  .main__content_6 {
+    width: 250px;
+    height: 300px;
+    margin: 1px;
+  }
+  .main__btn {
+    font-size: 16px;
+  }
+}
+@media all and (max-width: 790px) {
+  .main__content_first {
+    /* width: 95%; */
+    display: flex;
+    flex-direction: column;
+  }
+  .main__content_second {
+    /* width: 95%; */
+    display: flex;
+    flex-direction: column;
+  }
+  .c .main__content_1 h1,
+  .main__content_2 h1,
+  .main__content_3 h1,
+  .main__content_4 h1,
+  .main__content_5 h1,
+  .main__content_6 h1 {
+    font-size: 20px;
+  }
+  .main__btn {
+    font-size: 10px;
+  }
+}
+@media all and (max-width: 670px) {
+  .main__content_first {
+    justify-content: center;
+  }
+  .main__content_second {
+    justify-content: center;
+  }
+  .main-content-block {
+    display: flex;
+    justify-content: center;
+    /* margin-right: 35%; */
+  }
+  .main__content_1,
+  .main__content_2,
+  .main__content_3,
+  .main__content_4,
+  .main__content_5,
+  .main__content_6 {
+    width: 300px;
+  }
+}
+@media all and (max-width: 380px) {
+}
 @media (max-width: 780px) {
   .main__content_1,
   .main__content_2,
