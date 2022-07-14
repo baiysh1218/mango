@@ -11,6 +11,7 @@
 .footer-main-block {
   display: flex;
   flex-direction: column;
+  margin-top: 80px;
 }
 @media (max-width: 1300px) {
   .prefooter-img {
