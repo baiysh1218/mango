@@ -10,7 +10,7 @@ import YouTubeIcon from "@mui/icons-material/YouTube";
 
 const Footer = () => {
   return (
-    <div className="container">
+    <div>
       <div className="footer-intro-title-block">
         <div className="footer-intro-title">
           <h1 className="footer-intro-h1">Женское</h1>
