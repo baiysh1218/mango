@@ -11,47 +11,52 @@ const Main = () => {
   return (
     <div className="container">
       <div className="main__content">
-        <div className="main__content_first">
-          <div className="main__content_1">
-            <h1>
-              Accessories <br />
-              Edition
-            </h1>
-            <button className="main__btn">Узнать больше</button>
+        <div className="main-content-block">
+          {/* vfioj */}
+          <div className="main__content_first">
+            <div className="main__content_1">
+              <h1>
+                Accessories <br />
+                Edition
+              </h1>
+              <button className="main__btn">Узнать больше</button>
+            </div>
+            <div className="main__content_2">
+              <h1>
+                White <br />
+                Summer
+              </h1>
+              <button className="main__btn">Узнать больше</button>
+            </div>
+            <div className="main__content_3">
+              <h1>
+                Denim Shorts
+                <br />
+                Guide
+              </h1>
+              <button className="main__btn">Узнать больше</button>
+            </div>
           </div>
-          <div className="main__content_2">
-            <h1>
-              White <br />
-              Summer
-            </h1>
-            <button className="main__btn">Узнать больше</button>
+          {/* nvkfn */}
+          <div className="main__content_second">
+            <div className="main__content_4">
+              <h1>
+                Платья и
+                <br />
+                Комбинезоны
+              </h1>
+              <button className="main__btn">Узнать больше</button>
+            </div>
+            <div className="main__content_5">
+              <h1>Рубашки</h1>
+              <button className="main__btn">Узнать больше</button>
+            </div>
+            <div className="main__content_6">
+              <h1>Обувь</h1>
+              <button className="main__btn">Узнать больше</button>
+            </div>
           </div>
-          <div className="main__content_3">
-            <h1>
-              Denim Shorts
-              <br />
-              Guide
-            </h1>
-            <button className="main__btn">Узнать больше</button>
-          </div>
-        </div>
-        <div className="main__content_second">
-          <div className="main__content_4">
-            <h1>
-              Платья и
-              <br />
-              Комбинезоны
-            </h1>
-            <button className="main__btn">Узнать больше</button>
-          </div>
-          <div className="main__content_5">
-            <h1>Рубашки</h1>
-            <button className="main__btn">Узнать больше</button>
-          </div>
-          <div className="main__content_6">
-            <h1>Обувь</h1>
-            <button className="main__btn">Узнать больше</button>
-          </div>
+          {/* ncnkdl */}
         </div>
       </div>
     </div>
