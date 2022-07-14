@@ -13,21 +13,45 @@ const Main = () => {
       <div className="main__content">
         <div className="main__content_first">
           <div className="main__content_1">
-            {/* <img className="main-intro-img" src={main_img1} alt="" /> */}
             <h1>
               Accessories <br />
               Edition
             </h1>
             <button className="main__btn">Узнать больше</button>
           </div>
-
-          <img width={"33.3%"} src={main_img2} alt="" />
-          <img width={"33.3%"} src={main_img3} alt="" />
+          <div className="main__content_2">
+            <h1>
+              White <br />
+              Summer
+            </h1>
+            <button className="main__btn">Узнать больше</button>
+          </div>
+          <div className="main__content_3">
+            <h1>
+              Denim Shorts
+              <br />
+              Guide
+            </h1>
+            <button className="main__btn">Узнать больше</button>
+          </div>
         </div>
         <div className="main__content_second">
-          <img width={"33.3%"} src={main_img4} alt="" />
-          <img width={"33.3%"} src={main_img7} alt="" />
-          <img width={"33.3%"} src={main_img6} alt="" />
+          <div className="main__content_4">
+            <h1>
+              Платья и
+              <br />
+              Комбинезоны
+            </h1>
+            <button className="main__btn">Узнать больше</button>
+          </div>
+          <div className="main__content_5">
+            <h1>Рубашки</h1>
+            <button className="main__btn">Узнать больше</button>
+          </div>
+          <div className="main__content_6">
+            <h1>Обувь</h1>
+            <button className="main__btn">Узнать больше</button>
+          </div>
         </div>
       </div>
     </div>
