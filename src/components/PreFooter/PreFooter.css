@@ -6,6 +6,7 @@
 .prefooter-img {
   display: flex;
   justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 .footer-main-block {
   display: flex;
@@ -15,5 +16,17 @@
   .prefooter-img {
     display: flex;
     flex-wrap: wrap;
+  }
+}
+@media (max-width: 788px) {
+  .prefooter-img {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+}
+@media (max-width: 370px) {
+  .img-girls {
+    width: 80%;
   }
 }

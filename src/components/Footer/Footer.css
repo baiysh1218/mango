@@ -52,6 +52,9 @@
 .footer-intro-content-h4 {
   font-size: 16px;
 }
+.footer-intro-title-block {
+  margin-top: 15%;
+}
 @media all and (max-width: 770px) {
   .footer-intro-h1 {
     font-size: 26px;
