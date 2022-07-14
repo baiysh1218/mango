@@ -6,10 +6,12 @@
 .prefooter-img {
   display: flex;
   justify-content: space-evenly;
+  margin-top: 80px;
 }
 .footer-main-block {
   display: flex;
   flex-direction: column;
+  margin-top: 80px;
 }
 @media (max-width: 1300px) {
   .prefooter-img {
