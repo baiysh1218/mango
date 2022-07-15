@@ -2,6 +2,7 @@ import React from "react";
 import { useEffect } from "react";
 import { useContext } from "react";
 import { productsContext } from "../../contexts/productContetx";
+import "../ProductsList/ProductList.css";
 import ProductsCard from "../ProductsCard/ProductsCard";
 
 const ProductsUserList = () => {
