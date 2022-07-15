@@ -2,6 +2,8 @@ import React from "react";
 import { useEffect } from "react";
 import { useContext } from "react";
 import { productsContext } from "../../contexts/productContetx";
+import ProductsCard from "../ProductsCard/ProductsCard";
+import "../ProductsList/ProductList.css";
 
 const ProductsList = () => {
   const { products, getProducts } = useContext(productsContext);
@@ -11,11 +13,9 @@ const ProductsList = () => {
   // console.log(products);
   return (
     <div>
+      <div className="invicible"></div>
       {products.map(item => (
-        <div key={item.id}>
-          <p>{item.title}</p>
-          <p>{item.description}</p>
-        </div>
+        <ProductsCard key={item.id} item={item} />
       ))}
     </div>
   );
