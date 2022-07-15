@@ -4,9 +4,8 @@
   flex-direction: row;
 }
 
-.main {
-  margin: 5px;
-}
+/* .main {
+} */
 .about-text {
   display: flex;
   justify-content: center;
@@ -15,7 +14,7 @@
 .about-us {
   display: flex;
   justify-content: center;
-  margin-top: 50px;
+  margin-top: 120px;
 }
 .about-p {
   display: flex;
