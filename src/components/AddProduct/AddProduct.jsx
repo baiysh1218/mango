@@ -5,7 +5,7 @@ import { productsContext } from "../../contexts/productContetx";
 import "../AddProduct/AddProduct.css";
 
 const AddProduct = () => {
-  const { creatProdutc } = useContext(productsContext);
+  const { createProduct } = useContext(productsContext);
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [price, setPrice] = useState(0);
@@ -24,7 +24,7 @@ const AddProduct = () => {
       image3,
       image4,
     };
-    creatProdutc(newProduct);
+    createProduct(newProduct);
   }
   return (
     <div className="container">

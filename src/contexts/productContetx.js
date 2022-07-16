@@ -5,33 +5,12 @@ export const productsContext = createContext();
 
 const INIT_STATE = {
   products: [],
-  pages: 0,
-  categories: [],
-  oneProduct: null,
-  favorites: [],
-  favoritesPages: 0,
 };
 
 function reducer(state = INIT_STATE, action) {
   switch (action.type) {
     case "GET_PRODUCTS":
-      return {
-        ...state,
-        products: action.payload.results,
-        pages: Math.ceil(action.payload.count / 5),
-      };
-    case "GET_FAVORITES":
-      return {
-        ...state,
-        favorites: action.payload.results,
-        favoritesPages: Math.ceil(action.payload.count / 5),
-      };
-    case "GET_CATEGORIES":
-      return { ...state, categories: action.payload };
-    case "GET_ONE_PRODUCT":
-      return { ...state, oneProduct: action.payload };
-    default:
-      return state;
+      return { ...state, products: action.payload };
   }
 }
 
@@ -46,67 +25,14 @@ const ProductsContextProvider = ({ children }) => {
   }
 
   async function getProducts() {
-    try {
-      const tokens = JSON.parse(localStorage.getItem("tokens"));
-      //config
-      const Authorization = `Bearer ${tokens.access}`;
-      const config = {
-        headers: {
-          Authorization,
-        },
-      };
-      const res = await axios(
-        `${API}/products/${window.location.search}`,
-        config
-      );
-      dispatch({
-        type: "GET_PRODUCTS",
-        payload: res.data,
-      });
-    } catch (err) {
-      console.log(err);
-    }
+    let res = await axios(API);
+    dispatch({
+      type: "GET_PRODUCTS",
+      payload: res.data,
+    });
+    // console.log(res.data);
   }
-
-  async function getCategories() {
-    try {
-      const tokens = JSON.parse(localStorage.getItem("tokens"));
-      //config
-      const Authorization = `Bearer ${tokens.access}`;
-      const config = {
-        headers: {
-          Authorization,
-        },
-      };
-      const res = await axios(`${API}/category/list/`, config);
-      // console.log(res);
-      dispatch({
-        type: "GET_CATEGORIES",
-        payload: res.data.results,
-      });
-    } catch (err) {
-      console.log(err);
-    }
-  }
-
-  async function createProduct(newProduct, navigate) {
-    try {
-      const tokens = JSON.parse(localStorage.getItem("tokens"));
-      //config
-      const Authorization = `Bearer ${tokens.access}`;
-      const config = {
-        headers: {
-          Authorization,
-        },
-      };
-      const res = await axios.post(`${API}/products/`, newProduct, config);
-      console.log(res);
-      navigate("/products");
-      getProducts();
-    } catch (err) {
-      console.log(err);
-    }
-  }
+  // getProducts();
 
   return (
     <productsContext.Provider
