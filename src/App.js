@@ -5,16 +5,20 @@ import Header from "./components/Header/Header";
 import ProductsContextProvider from "./contexts/productContetx";
 import Routing from "./Routing/Routing";
 import "./App.css";
+import { CardContent } from "@mui/material";
+import CartContextProvider from "./contexts/cardContext";
 
 const App = () => {
   return (
-    <ProductsContextProvider>
-      <BrowserRouter>
-        <Header />
-        <Routing />
-        <Footer />
-      </BrowserRouter>
-    </ProductsContextProvider>
+    <CartContextProvider>
+      <ProductsContextProvider>
+        <BrowserRouter>
+          <Header />
+          <Routing />
+          <Footer />
+        </BrowserRouter>
+      </ProductsContextProvider>
+    </CartContextProvider>
   );
 };
 

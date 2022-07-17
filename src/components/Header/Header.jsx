@@ -4,6 +4,7 @@ import "./Header.css";
 
 import SearchIcon from "@mui/icons-material/Search";
 import PermIdentityIcon from "@mui/icons-material/PermIdentity";
+import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 
 import { IconButton } from "@mui/material";
@@ -23,9 +24,9 @@ const Header = () => {
         <div className="navbar-block-icons">
           <div className="navbar-icon-content-block">
             <IconButton>
-              <SearchIcon className="navbar-icon" />
+              <ShoppingCartOutlinedIcon className="navbar-icon" />
             </IconButton>
-            <p className="navbar-icon-p">поиск</p>
+            <p className="navbar-icon-p">карзина</p>
           </div>
           <div className="navbar-icon-content-block">
             <IconButton>
