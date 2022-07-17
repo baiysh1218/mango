@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 
 import "./Header.css";
 
@@ -7,8 +7,12 @@ import PermIdentityIcon from "@mui/icons-material/PermIdentity";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 
 import { IconButton } from "@mui/material";
+import { useNavigate } from "react-router-dom";
+import { authContext } from "../../contexts/authContext";
 
 const Header = () => {
+  const { handleLogout } = useContext(authContext);
+  const navigate = useNavigate();
   return (
     <div className="navber-background">
       {/* <div className="container"> */}
@@ -28,10 +32,16 @@ const Header = () => {
             <p className="navbar-icon-p">поиск</p>
           </div>
           <div className="navbar-icon-content-block">
-            <IconButton>
+            <IconButton onClick={() => navigate("/register")}>
               <PermIdentityIcon className="navbar-icon" />
             </IconButton>
             <p className="navbar-icon-p">вход</p>
+          </div>
+          <div className="navbar-icon-content-block">
+            <IconButton onClick={() => handleLogout(navigate)}>
+              <PermIdentityIcon className="navbar-icon" />
+            </IconButton>
+            <p className="navbar-icon-p">logout</p>
           </div>
           <div className="navbar-icon-content-block">
             <IconButton>
