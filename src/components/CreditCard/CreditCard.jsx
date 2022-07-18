@@ -1,7 +1,8 @@
+import { Alert, IconButton } from "@mui/material";
 import React from "react";
 import Cards from "react-credit-cards";
 import "react-credit-cards/es/styles-compiled.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "../CreditCard/CreditCard.css";
 
 export default class PaymentForm extends React.Component {
@@ -37,6 +38,7 @@ export default class PaymentForm extends React.Component {
           />
           <form className="form-inp">
             <input
+              className="form-card-inp-btn"
               type="tel"
               name="number"
               placeholder="Card Number"
@@ -44,6 +46,7 @@ export default class PaymentForm extends React.Component {
               onFocus={this.handleInputFocus}
             />
             <input
+              className="form-card-inp-btn"
               type="tel"
               name="name"
               placeholder="Card Name"
@@ -51,6 +54,7 @@ export default class PaymentForm extends React.Component {
               onFocus={this.handleInputFocus}
             />
             <input
+              className="form-card-inp-btn"
               type="tel"
               name="expiry"
               placeholder="Expiry"
@@ -58,13 +62,19 @@ export default class PaymentForm extends React.Component {
               onFocus={this.handleInputFocus}
             />
             <input
+              className="form-card-inp-btn"
               type="tel"
               name="cvc"
               placeholder="cvc"
               onChange={this.handleInputChange}
               onFocus={this.handleInputFocus}
             />
-            <button>saccess</button>
+            <IconButton>
+              <a href="#" className="form-card-inp-btn">
+                <span>buy</span>
+                <div class="liquid"></div>
+              </a>
+            </IconButton>
           </form>
         </div>
       </div>
