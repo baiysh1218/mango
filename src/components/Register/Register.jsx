@@ -36,7 +36,8 @@ const Register = () => {
   return (
     <div className="container">
       <div className="regiseter-block">
-        <div>
+
+        <div className="register-teg">
           <Typography variant="h5">Register</Typography>
           {error ? (
             <Box>
@@ -48,6 +49,7 @@ const Register = () => {
             </Box>
           ) : null}
           <div className="register-block">
+            huhjiikjn
             <input
               className="register-inp"
               value={email}
