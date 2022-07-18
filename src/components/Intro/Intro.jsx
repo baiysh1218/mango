@@ -4,6 +4,7 @@ import Video from "../Media/pexels-taryn-elliott-5363146.mp4";
 import img1 from "../Media/medsummer-logo.svg";
 import "../Intro/Intro.css";
 import Main from "../Main/Main";
+import Footer from "../Footer/Footer";
 
 const Intro = () => {
   return (
@@ -22,6 +23,7 @@ const Intro = () => {
         </div>
         <Main />
         <PreFooter />
+        <Footer />
       </div>
     </div>
   );
