@@ -6,18 +6,17 @@ import ProductsCard from "../ProductsCard/ProductsCard";
 import "../ProductsList/ProductList.css";
 
 const ProductsList = () => {
-  const { products, getProducts } = useContext(productsContext);
+  const { products } = useContext(productsContext);
   useEffect(() => {
-    getProducts();
+    // getProducts();
   }, []);
   // console.log(products);
   return (
     <div className="container">
-      <div className="product-list-block">
-        {products.map(item => (
-          <ProductsCard key={item.id} item={item} />
-        ))}
-      </div>
+      <div className="invicible"></div>
+      {products.map(item => (
+        <ProductsCard key={item.id} item={item} />
+      ))}
     </div>
   );
 };

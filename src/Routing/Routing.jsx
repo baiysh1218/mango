@@ -13,11 +13,13 @@ import { authContext } from "../contexts/authContext";
 import Login from "../components/Login/Login";
 import Magazines from "../components/Magazines/Magazines";
 import Company from "../components/Company/Company";
+import Contact from "../components/Contact/Contact";
+import Loader from "../components/Loader/Loader";
 
 const Routing = () => {
   const { loading, currentUser } = useContext(authContext);
   if (loading) {
-    return <>asf</>;
+    return <Loader />;
   }
   return (
     <Routes>
@@ -32,6 +34,7 @@ const Routing = () => {
       <Route path="/magazines" element={<Magazines />} />
       <Route path="/company" element={<Company />} />
 
+      <Route path="/contact" element={<Contact />} />
       <Route
         path="/register-success"
         element={
