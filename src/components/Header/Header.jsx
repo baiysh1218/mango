@@ -16,7 +16,6 @@ const Header = () => {
   const navigate = useNavigate();
   return (
     <div className="navber-background">
-      {/* <div className="container"> */}
       <div className="navbar-block">
         <div className="navbar-logo-block">
           <img
@@ -52,7 +51,6 @@ const Header = () => {
           </div>
         </div>
       </div>
-      {/* </div> */}
     </div>
   );
 };

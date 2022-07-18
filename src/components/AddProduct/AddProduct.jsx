@@ -29,7 +29,6 @@ const AddProduct = () => {
   return (
     <div className="container">
       <div className="add-product-content-block">
-        <div className="invicible"></div>
         <h2>Add Product</h2>
         <input
           value={title}
