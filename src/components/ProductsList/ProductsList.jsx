@@ -14,7 +14,7 @@ const ProductsList = () => {
   }, []);
   // console.log(products);
   return (
-    <div>
+    <div className="container">
       <div className="invicible"></div>
       <div>
         <button onClick={() => navigate("/add-product")}>add product</button>

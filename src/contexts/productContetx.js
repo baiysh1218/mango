@@ -1,11 +1,12 @@
-import React, { createContext, useReducer } from "react";
+import React, { useReducer } from "react";
 import axios from "axios";
 
-export const productsContext = createContext();
+export const productsContext = React.createContext();
 
 const INIT_STATE = {
   products: [],
   categories: [],
+
 };
 
 function reducer(state = INIT_STATE, action) {
@@ -70,8 +71,10 @@ const ProductsContextProvider = ({ children }) => {
         createProduct,
         getCategories,
       }}>
+
       {children}
     </productsContext.Provider>
   );
 };
+
 export default ProductsContextProvider;

@@ -11,6 +11,9 @@ import Register from "../components/Register/Register";
 import RegisterSuccess from "../components/RegisterSuccess/RegisterSuccess";
 import { authContext } from "../contexts/authContext";
 import Login from "../components/Login/Login";
+import Magazines from "../components/Magazines/Magazines";
+import Company from "../components/Company/Company";
+import Contact from "../components/Contact/Contact";
 import Loader from "../components/Loader/Loader";
 
 const Routing = () => {
@@ -28,6 +31,10 @@ const Routing = () => {
       <Route path="/credit-card" element={<CreditCard />} />
       <Route path="/card" element={<Card />} />
       <Route path="/register" element={<Register />} />
+      <Route path="/magazines" element={<Magazines />} />
+      <Route path="/company" element={<Company />} />
+
+      <Route path="/contact" element={<Contact />} />
       <Route
         path="/register-success"
         element={
