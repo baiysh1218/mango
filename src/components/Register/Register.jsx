@@ -43,18 +43,17 @@ const Register = () => {
   return (
     <div className="container">
       <div className="regiseter-block">
-        <div display={"flex"} flexDirection={"column"} marginTop={"50px"}>
+        <div className="register-teg">
           <Typography variant="h5">Register</Typography>
-          {/* {error ? (
-          <Box>
-            {error.map((item, index) => (
-              <Alert severity="error" key={item + index}>
-                {item}
-              </Alert>
-            ))}
-          </Box>
-
-        ) : null} */}
+          {error ? (
+            <Box>
+              {error.map((item, index) => (
+                <Alert severity="error" key={item + index}>
+                  {item}
+                </Alert>
+              ))}
+            </Box>
+          ) : null}
           <div className="register-block">
             <input
               className="register-inp"
