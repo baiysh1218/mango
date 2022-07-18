@@ -6,17 +6,22 @@ import ProductsContextProvider from "./contexts/productContetx";
 import Routing from "./Routing/Routing";
 import "./App.css";
 import AuthContextProvider from "./contexts/authContext";
+import { CardContent } from "@mui/material";
+import CartContextProvider from "./contexts/cardContext";
 
 const App = () => {
   return (
     <AuthContextProvider>
-      <ProductsContextProvider>
-        <BrowserRouter>
-          <Header />
-          <Routing />
-          <Footer />
-        </BrowserRouter>
-      </ProductsContextProvider>
+      <CartContextProvider>
+        <ProductsContextProvider>
+          <BrowserRouter>
+            <Header />
+            <div className="invicible"></div>
+            <Routing />
+            <Footer />
+          </BrowserRouter>
+        </ProductsContextProvider>
+      </CartContextProvider>
     </AuthContextProvider>
   );
 };

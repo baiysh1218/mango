@@ -1,19 +1,45 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import "../ProductsCard/ProductCard.css";
 
+import AddShoppingCartOutlinedIcon from "@mui/icons-material/AddShoppingCartOutlined";
+import { IconButton } from "@mui/material";
+import { cartContext } from "../../contexts/cardContext";
+import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
+import ShoppingCartRoundedIcon from "@mui/icons-material/ShoppingCartRounded";
+
 const ProductsCard = ({ item }) => {
+  const { addToCart, checkProductInCart } = useContext(cartContext);
+
+  const [productCart, setProductCart] = useState(checkProductInCart(item.id));
+
   console.log(item);
   return (
-    <div>
+    <div className="card-block">
       <div className="card-content-block">
         <div className="card-content-block-img-text">
           <div className="card-content">
             <img className="card-img" src={item.image} />
             <img className="card-img" src={item.image2} />
           </div>
-          <div className="card-title">
-            <p>{item.title}</p>
-            <p>{item.price}</p>
+          <div className="card-section-block">
+            <div className="card-title">
+              <p>{item.title}</p>
+              <p>{item.price}</p>
+            </div>
+            <div className="card-icon-block">
+              <IconButton
+                className="btn-cart"
+                onClick={() => {
+                  addToCart(item);
+                  setProductCart(checkProductInCart(item.id));
+                }}>
+                {productCart ? (
+                  <ShoppingCartRoundedIcon />
+                ) : (
+                  <ShoppingCartOutlinedIcon />
+                )}
+              </IconButton>
+            </div>
           </div>
         </div>
       </div>

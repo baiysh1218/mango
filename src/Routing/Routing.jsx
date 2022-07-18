@@ -3,10 +3,10 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import AboutUs from "../components/AboutUs/AboutUs";
 import AddProduct from "../components/AddProduct/AddProduct";
 import Intro from "../components/Intro/Intro";
-import ProductsCard from "../components/ProductsCard/ProductsCard";
 import ProductsList from "../components/ProductsList/ProductsList";
 import ProductsUserList from "../components/ProductsUserList/ProductsUserList";
 import CreditCard from "../components/CreditCard/CreditCard";
+import Card from "../components/Card/Card";
 import Register from "../components/Register/Register";
 import RegisterSuccess from "../components/RegisterSuccess/RegisterSuccess";
 import { authContext } from "../contexts/authContext";
@@ -26,6 +26,7 @@ const Routing = () => {
       <Route path="/products-list" element={<ProductsList />} />
       <Route path="/products-user-list" element={<ProductsUserList />} />
       <Route path="/credit-card" element={<CreditCard />} />
+      <Route path="/card" element={<Card />} />
       <Route path="/register" element={<Register />} />
       <Route
         path="/register-success"
