@@ -16,6 +16,7 @@ const App = () => {
         <ProductsContextProvider>
           <BrowserRouter>
             <Header />
+            <div className="invicible"></div>
             <Routing />
             <Footer />
           </BrowserRouter>
