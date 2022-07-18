@@ -55,6 +55,7 @@ const Register = () => {
             </Box>
           ) : null}
           <div className="register-block">
+            huhjiikjn
             <input
               className="register-inp"
               value={email}
