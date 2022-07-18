@@ -10,6 +10,7 @@ import React, { useContext, useEffect, useState } from "react";
 
 import { useNavigate } from "react-router-dom";
 import { authContext } from "../../contexts/authContext";
+import "../Login/Login.css";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -29,25 +30,32 @@ const Login = () => {
   }, []);
 
   return (
-    <div>
-      <div display={"flex"} flexDirection={"column"} marginTop={"50px"}>
-        <Typography variant="h5">login</Typography>
-        {error ? <Alert severity="error">{error}</Alert> : null}
-        <TextField
-          value={email}
-          onChange={e => setEmail(e.target.value)}
-          variant="outlined"
-          label="Email"
-        />
-        <TextField
-          value={password}
-          onChange={e => setPassword(e.target.value)}
-          variant="outlined"
-          label="Password"
-        />
-        <Button onClick={handleSave} variant="outlined">
-          Login
-        </Button>
+    <div className="container">
+      <div className="login-block-style">
+        <div display={"flex"} flexDirection={"column"} marginTop={"50px"}>
+          <Typography variant="h3" className="type-login">
+            login
+          </Typography>
+          {error ? <Alert severity="error">{error}</Alert> : null}
+          <div className="login-block">
+            <input
+              className="form-card-inp-btn"
+              value={email}
+              onChange={e => setEmail(e.target.value)}
+              placeholder="Email"
+            />
+            <input
+              className="form-card-inp-btn"
+              value={password}
+              onChange={e => setPassword(e.target.value)}
+              variant="outlined"
+              placeholder="Password"
+            />
+            <button class="custom-btn" onClick={handleSave}>
+              Login
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   );

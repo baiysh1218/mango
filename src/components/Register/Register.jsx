@@ -2,6 +2,7 @@ import { Box, Container, TextField, Button, Typography } from "@mui/material";
 import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { authContext } from "../../contexts/authContext";
+import "../Register/Register.css";
 
 const Register = () => {
   const { handleRegister } = useContext(authContext);
@@ -32,10 +33,11 @@ const Register = () => {
   // }
 
   return (
-    <div>
-      <div display={"flex"} flexDirection={"column"} marginTop={"50px"}>
-        <Typography variant="h5">Register</Typography>
-        {/* {error ? (
+    <div className="container">
+      <div className="regiseter-block">
+        <div display={"flex"} flexDirection={"column"} marginTop={"50px"}>
+          <Typography variant="h5">Register</Typography>
+          {/* {error ? (
           <Box>
             {error.map((item, index) => (
               <Alert severity="error" key={item + index}>
@@ -44,33 +46,43 @@ const Register = () => {
             ))}
           </Box>
         ) : null} */}
-        <TextField
-          value={email}
-          onChange={e => setEmail(e.target.value)}
-          variant="outlined"
-          label="Email"
-        />
-        <TextField
-          value={name}
-          onChange={e => setName(e.target.value)}
-          variant="outlined"
-          label="Name"
-        />
-        <TextField
-          value={password}
-          onChange={e => setPassword(e.target.value)}
-          variant="outlined"
-          label="Password"
-        />
-        <TextField
-          value={passwordConfirm}
-          onChange={e => setPasswordConfirm(e.target.value)}
-          variant="outlined"
-          label="Password confirmation"
-        />
-        <Button onClick={handleSave} variant="outlined">
-          Register
-        </Button>
+          <div className="register-block">
+            <input
+              className="register-inp"
+              value={email}
+              onChange={e => setEmail(e.target.value)}
+              variant="outlined"
+              placeholder="Email"
+            />
+            <input
+              className="register-inp"
+              value={name}
+              onChange={e => setName(e.target.value)}
+              variant="outlined"
+              placeholder="Name"
+            />
+            <input
+              className="register-inp"
+              value={password}
+              onChange={e => setPassword(e.target.value)}
+              variant="outlined"
+              placeholder="Password"
+            />
+            <input
+              className="register-inp"
+              value={passwordConfirm}
+              onChange={e => setPasswordConfirm(e.target.value)}
+              variant="outlined"
+              placeholder="Password confirmation"
+            />
+            <button
+              className="register-btn"
+              onClick={handleSave}
+              variant="outlined">
+              Register
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   );
