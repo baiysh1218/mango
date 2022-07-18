@@ -32,8 +32,8 @@ const Register = () => {
   // }
 
   return (
-    <Container maxWidth="sm">
-      <Box display={"flex"} flexDirection={"column"} marginTop={"50px"}>
+    <div>
+      <div display={"flex"} flexDirection={"column"} marginTop={"50px"}>
         <Typography variant="h5">Register</Typography>
         {/* {error ? (
           <Box>
@@ -71,8 +71,8 @@ const Register = () => {
         <Button onClick={handleSave} variant="outlined">
           Register
         </Button>
-      </Box>
-    </Container>
+      </div>
+    </div>
   );
 };
 

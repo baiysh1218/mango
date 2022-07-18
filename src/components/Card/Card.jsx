@@ -26,7 +26,6 @@ export default function Cart() {
   console.log(cart);
   return cart ? (
     <div className="buscet-block">
-      <div className="invicible"></div>
       <TableContainer component={Paper}>
         <Table
           sx={{ minWidth: 650 }}

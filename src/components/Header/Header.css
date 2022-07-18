@@ -3,13 +3,18 @@
   position: fixed;
   z-index: 5;
   width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* margin-left: -40%; */
 }
+
 .navbar-logo-block {
   display: flex;
   align-items: center;
   margin-left: 2%;
   padding: 15px 0;
-  justify-content: center;
+  justify-content: space-between;
 }
 .navbar-block-icons {
   display: flex;
@@ -29,6 +34,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  /* border: 2px solid red; */
+  width: inherit;
 }
 .navbar-icon-p {
   font-size: 11px;

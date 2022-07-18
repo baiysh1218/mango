@@ -29,8 +29,8 @@ const Login = () => {
   }, []);
 
   return (
-    <Container maxWidth="sm">
-      <Box display={"flex"} flexDirection={"column"} marginTop={"50px"}>
+    <div>
+      <div display={"flex"} flexDirection={"column"} marginTop={"50px"}>
         <Typography variant="h5">login</Typography>
         {error ? <Alert severity="error">{error}</Alert> : null}
         <TextField
@@ -48,8 +48,8 @@ const Login = () => {
         <Button onClick={handleSave} variant="outlined">
           Login
         </Button>
-      </Box>
-    </Container>
+      </div>
+    </div>
   );
 };
 

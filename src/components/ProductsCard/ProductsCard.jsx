@@ -14,9 +14,7 @@ const ProductsCard = ({ item }) => {
 
   console.log(item);
   return (
-    <div>
-      <div className="invicible"></div>
-
+    <div className="card-block">
       <div className="card-content-block">
         <div className="card-content-block-img-text">
           <div className="card-content">
