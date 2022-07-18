@@ -29,47 +29,47 @@ const PRODUCTS_API = "http://localhost:8001/products";
 const ProductsContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, INIT_STATE);
 
-  //! Create
-  async function createProduct(newProduct) {
-    await axios.post(PRODUCTS_API, newProduct);
-    getProducts();
+  async function getCategories() {
+    try {
+      // console.log(res.data.count);
+      // console.log(res.data.results);
+      const tokens = JSON.parse(localStorage.getItem("tokens"));
+      //! config
+      const Authorization = `Bearer ${tokens.access}`;
+      const config = {
+        headers: { Authorization },
+      };
+      const res = await axios(`${API}/category/`, config);
+      console.log(res);
+      dispatch({
+        type: "GET_CATEGORIES",
+        payload: res.data.results,
+      });
+    } catch (err) {
+      console.log(err);
+    }
   }
 
-  //! Read
-  async function getProducts() {
-    const res = await axios(`${PRODUCTS_API}/${window.location.search}`);
-    console.log(res);
-    dispatch({
-      type: "GET_PRODUCTS",
-      payload: res,
-    });
-  }
-
-  //! Delete
-  async function deleteProduct(id) {
-    await axios.delete(`${PRODUCTS_API}/${id}`);
-    getProducts();
-  }
-
-  //! Details, Get for edit
-  async function getOneProduct(id) {
-    const res = await axios(`${PRODUCTS_API}/${id}`);
-    dispatch({
-      type: "GET_ONE",
-      payload: res.data,
-    });
-  }
-  //! Update
-  async function updateProduct(id, editedProduct) {
-    await axios.patch(`${PRODUCTS_API}/${id}`, editedProduct);
-    getProducts();
+  async function createProduct(newProduct, navigate) {
+    try {
+      const tokens = JSON.parse(localStorage.getItem("tokens"));
+      //! config
+      const Authorization = `Bearer ${tokens.access}`;
+      const config = {
+        headers: { Authorization },
+      };
+      const res = await axios.post(`${API}/products/, newProduct`, config);
+      // navigate("/products");
+      // getProducts();
+      console.log(res);
+    } catch (err) {
+      console.log(err);
+    }
   }
 
   return (
     <productsContext.Provider
-
       value={{ products: state.products, creatProdutc }}>
-
       {children}
     </productsContext.Provider>
   );
