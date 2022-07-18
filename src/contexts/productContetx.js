@@ -67,16 +67,9 @@ const ProductsContextProvider = ({ children }) => {
 
   return (
     <productsContext.Provider
-      value={{
-        products: state.products,
-        oneProduct: state.oneProduct,
-        pages: state.pages,
-        createProduct,
-        getProducts,
-        deleteProduct,
-        getOneProduct,
-        updateProduct,
-      }}>
+
+      value={{ products: state.products, creatProdutc }}>
+
       {children}
     </productsContext.Provider>
   );

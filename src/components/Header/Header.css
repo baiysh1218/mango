@@ -3,13 +3,19 @@
   position: fixed;
   z-index: 5;
   width: 100%;
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+  /* margin-left: -40%; */
+  /* margin-top: 0; */
 }
+
 .navbar-logo-block {
   display: flex;
-  align-items: center;
-  margin-left: 2%;
+  /* align-items: center; */
+  margin-left: 3%;
   padding: 15px 0;
-  justify-content: center;
+  /* justify-content: space-between; */
 }
 .navbar-block-icons {
   display: flex;
@@ -28,7 +34,10 @@
 .navbar-block {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  /* border: 2px solid red; */
+  /* width: inherit; */
+  width: 100%;
 }
 .navbar-icon-p {
   font-size: 11px;

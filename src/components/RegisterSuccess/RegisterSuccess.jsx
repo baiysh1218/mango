@@ -4,18 +4,13 @@ import { Link } from "react-router-dom";
 
 const RegisterSuccess = () => {
   return (
-    <Container>
-      <Box>
-        <div>a</div>
-        <div>d</div>
-        <div>s</div>
-        <div>s</div>
-        <div>s</div>
+    <div className="container">
+      <div>
         <Typography>
           Вы успешно зарегистрировались! Можете <Link to="/login">Войти</Link>
         </Typography>
-      </Box>
-    </Container>
+      </div>
+    </div>
   );
 };
 

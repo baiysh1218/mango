@@ -1,10 +1,12 @@
-import { Box, Container, TextField, Button, Typography } from "@mui/material";
-import React, { useContext, useState } from "react";
+import { Box, Typography, Alert } from "@mui/material";
+import React, { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { authContext } from "../../contexts/authContext";
+import Loader from "../Loader/Loader";
+import "../Register/Register.css";
 
 const Register = () => {
-  const { handleRegister } = useContext(authContext);
+  const { handleRegister, loading, error, setError } = useContext(authContext);
   // console.log(loading);
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
@@ -23,19 +25,22 @@ const Register = () => {
     console.log(formData);
   }
 
-  // useEffect(() => {
-  //   setError(false);
-  // }, []);
+  useEffect(() => {
+    setError(false);
+  }, []);
 
-  // if (loading) {
-  //   return <Loader />;
-  // }
+  if (loading) {
+    return <Loader />;
+  }
 
   return (
-    <Container maxWidth="sm">
-      <Box display={"flex"} flexDirection={"column"} marginTop={"50px"}>
-        <Typography variant="h5">Register</Typography>
-        {/* {error ? (
+    <div className="container">
+      <div className="regiseter-block">
+        <div className="register-teg">
+          <Typography variant="h5">Register</Typography>
+        </div>
+
+        {error ? (
           <Box>
             {error.map((item, index) => (
               <Alert severity="error" key={item + index}>
@@ -43,36 +48,45 @@ const Register = () => {
               </Alert>
             ))}
           </Box>
-        ) : null} */}
-        <TextField
-          value={email}
-          onChange={e => setEmail(e.target.value)}
-          variant="outlined"
-          label="Email"
-        />
-        <TextField
-          value={name}
-          onChange={e => setName(e.target.value)}
-          variant="outlined"
-          label="Name"
-        />
-        <TextField
-          value={password}
-          onChange={e => setPassword(e.target.value)}
-          variant="outlined"
-          label="Password"
-        />
-        <TextField
-          value={passwordConfirm}
-          onChange={e => setPasswordConfirm(e.target.value)}
-          variant="outlined"
-          label="Password confirmation"
-        />
-        <Button onClick={handleSave} variant="outlined">
-          Register
-        </Button>
-      </Box>
-    </Container>
+        ) : null}
+        <div className="register-block">
+          <input
+            className="register-inp"
+            value={email}
+            onChange={e => setEmail(e.target.value)}
+            variant="outlined"
+            placeholder="Email"
+          />
+          <input
+            className="register-inp"
+            value={name}
+            onChange={e => setName(e.target.value)}
+            variant="outlined"
+            placeholder="Name"
+          />
+          <input
+            className="register-inp"
+            value={password}
+            onChange={e => setPassword(e.target.value)}
+            variant="outlined"
+            placeholder="Password"
+          />
+          <input
+            className="register-inp"
+            value={passwordConfirm}
+            onChange={e => setPasswordConfirm(e.target.value)}
+            variant="outlined"
+            placeholder="Password confirmation"
+          />
+          <button
+            className="register-btn"
+            onClick={handleSave}
+            variant="outlined">
+            Register
+          </button>
+        </div>
+      </div>
+    </div>
   );
 };
 

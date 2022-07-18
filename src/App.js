@@ -18,7 +18,6 @@ const App = () => {
             <Header />
             <div className="invicible"></div>
             <Routing />
-            <Footer />
           </BrowserRouter>
         </ProductsContextProvider>
       </CartContextProvider>

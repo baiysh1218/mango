@@ -8,10 +8,10 @@ const API = "https://mysterious-journey-37714.herokuapp.com";
 const AuthContextProvider = ({ children }) => {
   const [currentUser, setCurrentUser] = useState(false);
   const [error, setError] = useState(false);
-  // const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   async function handleRegister(formData, navigate) {
-    // setLoading(true);
+    setLoading(true);
     try {
       const res = await axios.post(`${API}/account/registration/`, formData);
       console.log(res);
@@ -19,10 +19,9 @@ const AuthContextProvider = ({ children }) => {
     } catch (err) {
       setError(Object.values(err.response.data).flat(2));
       console.log(err);
+    } finally {
+      setLoading(false);
     }
-    // finally {
-    //   setLoading(false);
-    // }
   }
 
   //!
@@ -32,16 +31,16 @@ const AuthContextProvider = ({ children }) => {
       localStorage.setItem("tokens", JSON.stringify(res.data));
       localStorage.setItem("email", email);
       setCurrentUser(email);
-      navigate("/products");
+      navigate("/products-list");
       console.log(res);
     } catch (err) {
       console.log(err);
-      setError([err.response.data.detail]);
+      setError([err.response.data.non_field_errors]);
     }
   }
 
   async function checkAuth() {
-    // setLoading(true);
+    setLoading(true);
     try {
       const tokens = JSON.parse(localStorage.getItem("tokens"));
       //! config
@@ -67,10 +66,9 @@ const AuthContextProvider = ({ children }) => {
     } catch (err) {
       console.log(err);
       handleLogout();
+    } finally {
+      setLoading(false);
     }
-    //  finally {
-    //   setLoading(false);
-    // }
   }
 
   function handleLogout(navigate) {
@@ -83,12 +81,14 @@ const AuthContextProvider = ({ children }) => {
   return (
     <authContext.Provider
       value={{
+        currentUser,
+        loading,
+        error,
         handleRegister,
         handleLogin,
         setError,
         checkAuth,
         handleLogout,
-        currentUser,
       }}>
       {children}
     </authContext.Provider>

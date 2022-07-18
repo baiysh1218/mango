@@ -2,7 +2,7 @@ import { Alert, IconButton } from "@mui/material";
 import React from "react";
 import Cards from "react-credit-cards";
 import "react-credit-cards/es/styles-compiled.css";
-import { Link, useNavigate } from "react-router-dom";
+
 import "../CreditCard/CreditCard.css";
 
 export default class PaymentForm extends React.Component {
@@ -26,8 +26,7 @@ export default class PaymentForm extends React.Component {
 
   render() {
     return (
-      <div>
-        <div className="invicible"></div>
+      <div className="credit-card-block-main container">
         <div id="PaymentForm">
           <Cards
             cvc={this.state.cvc}
@@ -70,7 +69,7 @@ export default class PaymentForm extends React.Component {
               onFocus={this.handleInputFocus}
             />
             <IconButton>
-              <a href="#" className="form-card-inp-btn">
+              <a href="#" className="btn-sacc">
                 <span>buy</span>
                 <div class="liquid"></div>
               </a>

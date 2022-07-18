@@ -16,10 +16,10 @@ const Header = () => {
   const navigate = useNavigate();
   return (
     <div className="navber-background">
-      {/* <div className="container"> */}
       <div className="navbar-block">
         <div className="navbar-logo-block">
           <img
+            onClick={() => navigate("/")}
             className="logo-mango-navbar"
             src="https://st.mngbcn.com/images/headerNew/logos/mango.svg"
             alt=""
@@ -28,9 +28,12 @@ const Header = () => {
         <div className="navbar-block-icons">
           <div className="navbar-icon-content-block">
             <IconButton>
-              <ShoppingCartOutlinedIcon className="navbar-icon" />
+              <ShoppingCartOutlinedIcon
+                onClick={() => navigate("/card")}
+                className="navbar-icon"
+              />
             </IconButton>
-            <p className="navbar-icon-p">карзина</p>
+            <p className="navbar-icon-p">корзина</p>
           </div>
           <div className="navbar-icon-content-block">
             <IconButton onClick={() => navigate("/register")}>
@@ -52,7 +55,6 @@ const Header = () => {
           </div>
         </div>
       </div>
-      {/* </div> */}
     </div>
   );
 };

@@ -24,6 +24,8 @@ video {
   margin-top: -70%;
   width: 50%;
   z-index: 3;
+  margin-left: 50%;
+  width: 50%;
 }
 .intro__img-block {
   display: flex;

@@ -6,13 +6,13 @@ import ProductsCard from "../ProductsCard/ProductsCard";
 import "../ProductsList/ProductList.css";
 
 const ProductsList = () => {
-  const { products, getProducts } = useContext(productsContext);
+  const { products } = useContext(productsContext);
   useEffect(() => {
-    getProducts();
+    // getProducts();
   }, []);
   // console.log(products);
   return (
-    <div>
+    <div className="container">
       <div className="invicible"></div>
       {products.map(item => (
         <ProductsCard key={item.id} item={item} />

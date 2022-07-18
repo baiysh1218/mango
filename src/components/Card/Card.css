@@ -1,0 +1,12 @@
+.buscet-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.btn-by {
+  background-color: rgba(66, 249, 255, 0.795);
+  border: 0;
+  padding: 5%;
+  width: 80%;
+  border-radius: 10px;
+}
