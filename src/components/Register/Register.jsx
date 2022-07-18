@@ -9,9 +9,8 @@ import {
 import React, { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { authContext } from "../../contexts/authContext";
-import Loader from "../Loader/L
+import Loader from "../Loader/Loader";
 import "../Register/Register.css";
-
 
 const Register = () => {
   const { handleRegister, loading, error, setError } = useContext(authContext);
@@ -42,7 +41,6 @@ const Register = () => {
   }
 
   return (
-
     <div className="container">
       <div className="regiseter-block">
         <div display={"flex"} flexDirection={"column"} marginTop={"50px"}>
