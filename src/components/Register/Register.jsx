@@ -1,4 +1,4 @@
-import { Box, Typography, Alert } from "@mui/material";
+import { Typography, Alert } from "@mui/material";
 import React, { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { authContext } from "../../contexts/authContext";
@@ -38,52 +38,53 @@ const Register = () => {
       <div className="regiseter-block">
         <div className="register-teg">
           <Typography variant="h5">Register</Typography>
-        </div>
-
-        {error ? (
-          <Box>
-            {error.map((item, index) => (
-              <Alert severity="error" key={item + index}>
-                {item}
-              </Alert>
-            ))}
-          </Box>
-        ) : null}
-        <div className="register-block">
-          <input
-            className="register-inp"
-            value={email}
-            onChange={e => setEmail(e.target.value)}
-            variant="outlined"
-            placeholder="Email"
-          />
-          <input
-            className="register-inp"
-            value={name}
-            onChange={e => setName(e.target.value)}
-            variant="outlined"
-            placeholder="Name"
-          />
-          <input
-            className="register-inp"
-            value={password}
-            onChange={e => setPassword(e.target.value)}
-            variant="outlined"
-            placeholder="Password"
-          />
-          <input
-            className="register-inp"
-            value={passwordConfirm}
-            onChange={e => setPasswordConfirm(e.target.value)}
-            variant="outlined"
-            placeholder="Password confirmation"
-          />
-          <button
-            className="register-btn"
-            onClick={handleSave}
-            variant="outlined">
-            Register
-          </button>
+          {error ? (
+            <div>
+              {error.map((item, index) => (
+                <Alert severity="error" key={item + index}>
+                  {item}
+                </Alert>
+              ))}
+            </div>
+          ) : null}
+          <div className="register-block">
+            huhjiikjn
+            <input
+              className="register-inp"
+              value={email}
+              onChange={e => setEmail(e.target.value)}
+              variant="outlined"
+              placeholder="Email"
+            />
+            <input
+              className="register-inp"
+              value={name}
+              onChange={e => setName(e.target.value)}
+              variant="outlined"
+              placeholder="Name"
+            />
+            <input
+              className="register-inp"
+              value={password}
+              onChange={e => setPassword(e.target.value)}
+              variant="outlined"
+              placeholder="Password"
+            />
+            <input
+              className="register-inp"
+              value={passwordConfirm}
+              onChange={e => setPasswordConfirm(e.target.value)}
+              variant="outlined"
+              placeholder="Password confirmation"
+            />
+            <button
+              className="register-btn"
+              onClick={handleSave}
+              variant="outlined">
+              Register
+            </button>
+          </div>
+       
         </div>
       </div>
     </div>

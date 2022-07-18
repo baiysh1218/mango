@@ -5,26 +5,22 @@ export const productsContext = React.createContext();
 
 const INIT_STATE = {
   products: [],
-  oneProduct: null,
-  pages: 0,
+  categories: [],
+
 };
 
 function reducer(state = INIT_STATE, action) {
   switch (action.type) {
     case "GET_PRODUCTS":
-      return {
-        ...state,
-        products: action.payload.data,
-        pages: Math.ceil(action.payload.headers["x-total-count"] / 2),
-      };
-    case "GET_ONE":
-      return { ...state, oneProduct: action.payload };
+      return { ...state, products: action.payload };
+    case "GET_CATEGORIES":
+      return { ...state, categories: action.payload };
     default:
       return state;
   }
 }
 
-const PRODUCTS_API = "http://localhost:8001/products";
+const API = "https://mysterious-journey-37714.herokuapp.com";
 
 const ProductsContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, INIT_STATE);
@@ -58,7 +54,7 @@ const ProductsContextProvider = ({ children }) => {
       const config = {
         headers: { Authorization },
       };
-      const res = await axios.post(`${API}/products/, newProduct`, config);
+      const res = await axios.post(`${API}/products/`, newProduct, config);
       // navigate("/products");
       // getProducts();
       console.log(res);
@@ -69,7 +65,13 @@ const ProductsContextProvider = ({ children }) => {
 
   return (
     <productsContext.Provider
-      value={{ products: state.products, creatProdutc }}>
+      value={{
+        products: state.products,
+        categories: state.categories,
+        createProduct,
+        getCategories,
+      }}>
+
       {children}
     </productsContext.Provider>
   );

@@ -6,9 +6,9 @@ import "../ProductsList/ProductList.css";
 import ProductsCard from "../ProductsCard/ProductsCard";
 
 const ProductsUserList = () => {
-  const { products, getProducts } = useContext(productsContext);
+  const { products } = useContext(productsContext);
   useEffect(() => {
-    getProducts();
+    // getProducts();
   }, []);
   return (
     <div>
