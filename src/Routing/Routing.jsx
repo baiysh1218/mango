@@ -11,6 +11,8 @@ import Register from "../components/Register/Register";
 import RegisterSuccess from "../components/RegisterSuccess/RegisterSuccess";
 import { authContext } from "../contexts/authContext";
 import Login from "../components/Login/Login";
+import Magazines from "../components/Magazines/Magazines";
+import Company from "../components/Company/Company";
 
 const Routing = () => {
   const { loading, currentUser } = useContext(authContext);
@@ -27,6 +29,9 @@ const Routing = () => {
       <Route path="/credit-card" element={<CreditCard />} />
       <Route path="/card" element={<Card />} />
       <Route path="/register" element={<Register />} />
+      <Route path="/magazines" element={<Magazines />} />
+      <Route path="/company" element={<Company />} />
+
       <Route
         path="/register-success"
         element={

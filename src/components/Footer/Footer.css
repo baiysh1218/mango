@@ -30,9 +30,14 @@
   align-items: center;
 }
 .footer-section-content {
+  justify-content: center;
+  width: 35%;
+  height: 100%;
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   padding-top: 2%;
-  margin: 2% 0;
+  margin: 2% 0%;
 }
 .footer-section-icon {
   display: flex;
@@ -74,8 +79,11 @@
     font-size: 10px;
   }
   .footer-intro-h4 {
-    margin: 20% 0;
+    margin: 20%;
     font-size: 10px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
   }
   .footer-icons {
     width: 1%;
