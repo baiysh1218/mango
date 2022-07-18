@@ -1,10 +1,18 @@
-import { Box, Container, TextField, Button, Typography } from "@mui/material";
-import React, { useContext, useState } from "react";
+import {
+  Box,
+  Container,
+  TextField,
+  Button,
+  Typography,
+  Alert,
+} from "@mui/material";
+import React, { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { authContext } from "../../contexts/authContext";
+import Loader from "../Loader/Loader";
 
 const Register = () => {
-  const { handleRegister } = useContext(authContext);
+  const { handleRegister, loading, error, setError } = useContext(authContext);
   // console.log(loading);
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
@@ -23,19 +31,19 @@ const Register = () => {
     console.log(formData);
   }
 
-  // useEffect(() => {
-  //   setError(false);
-  // }, []);
+  useEffect(() => {
+    setError(false);
+  }, []);
 
-  // if (loading) {
-  //   return <Loader />;
-  // }
+  if (loading) {
+    return <Loader />;
+  }
 
   return (
     <Container maxWidth="sm">
       <Box display={"flex"} flexDirection={"column"} marginTop={"50px"}>
         <Typography variant="h5">Register</Typography>
-        {/* {error ? (
+        {error ? (
           <Box>
             {error.map((item, index) => (
               <Alert severity="error" key={item + index}>
@@ -43,7 +51,7 @@ const Register = () => {
               </Alert>
             ))}
           </Box>
-        ) : null} */}
+        ) : null}
         <TextField
           value={email}
           onChange={e => setEmail(e.target.value)}

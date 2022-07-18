@@ -1,7 +1,6 @@
 import React from "react";
 import Cards from "react-credit-cards";
 import "react-credit-cards/es/styles-compiled.css";
-import { Link } from "react-router-dom";
 import "../CreditCard/CreditCard.css";
 
 export default class PaymentForm extends React.Component {
