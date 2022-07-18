@@ -12,12 +12,11 @@ const ProductsList = () => {
   }, []);
   // console.log(products);
   return (
-    <div className="container">
-      <div className="product-list-block">
-        {products.map(item => (
-          <ProductsCard key={item.id} item={item} />
-        ))}
-      </div>
+    <div>
+      <div className="invicible"></div>
+      {products.map(item => (
+        <ProductsCard key={item.id} item={item} />
+      ))}
     </div>
   );
 };

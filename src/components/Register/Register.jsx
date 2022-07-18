@@ -1,11 +1,4 @@
-import {
-  Box,
-  Container,
-  TextField,
-  Button,
-  Typography,
-  Alert,
-} from "@mui/material";
+import { Box, Typography, Alert } from "@mui/material";
 import React, { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { authContext } from "../../contexts/authContext";
@@ -43,6 +36,7 @@ const Register = () => {
   return (
     <div className="container">
       <div className="regiseter-block">
+
         <div className="register-teg">
           <Typography variant="h5">Register</Typography>
           {error ? (
