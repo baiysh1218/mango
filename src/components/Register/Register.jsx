@@ -1,4 +1,4 @@
-import { Box, Typography, Alert } from "@mui/material";
+import { Typography, Alert } from "@mui/material";
 import React, { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { authContext } from "../../contexts/authContext";
@@ -36,17 +36,16 @@ const Register = () => {
   return (
     <div className="container">
       <div className="regiseter-block">
-
         <div className="register-teg">
           <Typography variant="h5">Register</Typography>
           {error ? (
-            <Box>
+            <div>
               {error.map((item, index) => (
                 <Alert severity="error" key={item + index}>
                   {item}
                 </Alert>
               ))}
-            </Box>
+            </div>
           ) : null}
           <div className="register-block">
             huhjiikjn

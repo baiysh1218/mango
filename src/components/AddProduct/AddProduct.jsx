@@ -1,29 +1,44 @@
-import React from "react";
+import {
+  Box,
+  FormControl,
+  IconButton,
+  InputLabel,
+  MenuItem,
+  Select,
+  Typography,
+} from "@mui/material";
+
+import React, { useEffect } from "react";
 import { useState } from "react";
 import { useContext } from "react";
+import { PhotoCamera } from "@mui/icons-material";
 import { productsContext } from "../../contexts/productContetx";
 import "../AddProduct/AddProduct.css";
 
 const AddProduct = () => {
-  const { createProduct } = useContext(productsContext);
+  const { createProduct, categories, getCategories } =
+    useContext(productsContext);
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
-  const [price, setPrice] = useState(0);
-  const [image, setImage] = useState("");
-  const [image2, setImage2] = useState("");
-  const [image3, setImage3] = useState("");
-  const [image4, setImage4] = useState("");
+  const [price, setPrice] = useState("");
+  const [category, setCategory] = useState("");
+  const [image, setImage] = useState(null);
+  // const [image2, setImage2] = useState(null);
+  // const [image3, setImage3] = useState(null);
+  // const [image4, setImage4] = useState(null);
+
+  useEffect(() => {
+    getCategories();
+  }, []);
+  console.log(categories);
 
   function handleSave() {
-    const newProduct = {
-      title,
-      description,
-      price,
-      image,
-      image2,
-      image3,
-      image4,
-    };
+    let newProduct = new FormData();
+    newProduct.append("title", title);
+    newProduct.append("description", description);
+    newProduct.append("price", price);
+    newProduct.append("category", category);
+    newProduct.append("image", image);
     createProduct(newProduct);
   }
   return (
@@ -48,30 +63,37 @@ const AddProduct = () => {
           type={"number"}
           placeholder={"price"}
         />
-        <input
-          value={image}
-          onChange={e => setImage(e.target.value)}
-          type={"text"}
-          placeholder={"title image"}
-        />
-        <input
-          value={image2}
-          onChange={e => setImage2(e.target.value)}
-          type={"text"}
-          placeholder={"image 2"}
-        />
-        <input
-          value={image3}
-          onChange={e => setImage3(e.target.value)}
-          type={"text"}
-          placeholder={"image 3"}
-        />
-        <input
-          value={image4}
-          onChange={e => setImage4(e.target.value)}
-          type={"text"}
-          placeholder={"image 4"}
-        />
+
+        <FormControl fullWidth>
+          <InputLabel id="demo-simple-select-label">Category</InputLabel>
+          <Select
+            labelId="demo-simple-select-label"
+            id="demo-simple-select"
+            value={category}
+            label="Category"
+            onChange={e => setCategory(e.target.value)}>
+            {categories.map(item => (
+              <MenuItem key={item.title} value={item.title}>
+                {item.title}
+              </MenuItem>
+            ))}
+          </Select>
+        </FormControl>
+        <Box>
+          <IconButton
+            color="primary"
+            aria-label="upload picture"
+            component="label">
+            <input
+              hidden
+              accept="image/*"
+              type="file"
+              onChange={e => setImage(e.target.files[0])}
+            />
+            <PhotoCamera />
+          </IconButton>
+          {image ? <Typography variant="span">{image.name}</Typography> : null}
+        </Box>
         <button onClick={handleSave}>add product</button>
       </div>
     </div>

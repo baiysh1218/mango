@@ -8,6 +8,7 @@ import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import ShoppingCartRoundedIcon from "@mui/icons-material/ShoppingCartRounded";
 
 const ProductsCard = ({ item }) => {
+  console.log(item);
   const { addToCart, checkProductInCart } = useContext(cartContext);
 
   const [productCart, setProductCart] = useState(checkProductInCart(item.id));
