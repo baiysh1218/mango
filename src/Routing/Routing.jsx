@@ -11,11 +11,12 @@ import Register from "../components/Register/Register";
 import RegisterSuccess from "../components/RegisterSuccess/RegisterSuccess";
 import { authContext } from "../contexts/authContext";
 import Login from "../components/Login/Login";
+import Loader from "../components/Loader/Loader";
 
 const Routing = () => {
   const { loading, currentUser } = useContext(authContext);
   if (loading) {
-    return <>asf</>;
+    return <Loader />;
   }
   return (
     <Routes>

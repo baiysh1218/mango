@@ -19,20 +19,21 @@ const API = "http://localhost:8000/products";
 const ProductsContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, INIT_STATE);
 
-  async function creatProdutc(newProduct) {
-    await axios.post(API, newProduct);
-    getProducts();
+  async function createProduct(newProduct, navigate) {
+    try {
+      const tokens = JSON.parse(localStorage.getItem("tokens"));
+      //! config
+      const Authorization = `Bearer ${tokens.access}`;
+      const config = {
+        headers: { Authorization },
+      };
+      const res = await axios.post(`${API}/products/`, newProduct, config);
+      navigate("/products");
+      getProducts();
+    } catch (err) {
+      console.log(err);
+    }
   }
-
-  async function getProducts() {
-    let res = await axios(API);
-    dispatch({
-      type: "GET_PRODUCTS",
-      payload: res.data,
-    });
-    // console.log(res.data);
-  }
-  // getProducts();
 
   return (
     <productsContext.Provider

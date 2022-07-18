@@ -30,6 +30,7 @@ const Login = () => {
   }, []);
 
   return (
+
     <div className="container">
       <div className="login-block-style">
         <div display={"flex"} flexDirection={"column"} marginTop={"50px"}>
@@ -58,6 +59,7 @@ const Login = () => {
         </div>
       </div>
     </div>
+
   );
 };
 

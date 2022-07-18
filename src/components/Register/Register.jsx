@@ -1,11 +1,20 @@
-import { Box, Container, TextField, Button, Typography } from "@mui/material";
-import React, { useContext, useState } from "react";
+import {
+  Box,
+  Container,
+  TextField,
+  Button,
+  Typography,
+  Alert,
+} from "@mui/material";
+import React, { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { authContext } from "../../contexts/authContext";
+import Loader from "../Loader/L
 import "../Register/Register.css";
 
+
 const Register = () => {
-  const { handleRegister } = useContext(authContext);
+  const { handleRegister, loading, error, setError } = useContext(authContext);
   // console.log(loading);
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
@@ -24,15 +33,16 @@ const Register = () => {
     console.log(formData);
   }
 
-  // useEffect(() => {
-  //   setError(false);
-  // }, []);
+  useEffect(() => {
+    setError(false);
+  }, []);
 
-  // if (loading) {
-  //   return <Loader />;
-  // }
+  if (loading) {
+    return <Loader />;
+  }
 
   return (
+
     <div className="container">
       <div className="regiseter-block">
         <div display={"flex"} flexDirection={"column"} marginTop={"50px"}>
@@ -45,6 +55,7 @@ const Register = () => {
               </Alert>
             ))}
           </Box>
+
         ) : null} */}
           <div className="register-block">
             <input
