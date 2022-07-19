@@ -60,6 +60,11 @@
 .footer-intro-title-block {
   margin-top: 15%;
 }
+.footer-block {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
 @media all and (max-width: 770px) {
   .footer-intro-h1 {
     font-size: 26px;
