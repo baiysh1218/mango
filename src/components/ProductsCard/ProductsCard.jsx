@@ -6,11 +6,14 @@ import { IconButton } from "@mui/material";
 import { cartContext } from "../../contexts/cardContext";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import ShoppingCartRoundedIcon from "@mui/icons-material/ShoppingCartRounded";
+import { useNavigate } from "react-router-dom";
+import { productsContext } from "../../contexts/productContetx";
 
 const ProductsCard = ({ item }) => {
   console.log(item);
   const { addToCart, checkProductInCart } = useContext(cartContext);
-
+  const { deleteProduct } = useContext(productsContext);
+  const navigate = useNavigate();
   const [productCart, setProductCart] = useState(checkProductInCart(item.id));
 
   console.log(item);
@@ -42,6 +45,8 @@ const ProductsCard = ({ item }) => {
               </IconButton>
             </div>
           </div>
+          <button onClick={() => deleteProduct(item.id)}>delete</button>
+          <button onClick={() => navigate(`/edit/${item.id}`)}>edit</button>
         </div>
       </div>
     </div>
