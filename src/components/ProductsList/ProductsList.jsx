@@ -17,9 +17,15 @@ const ProductsList = () => {
   return (
     <div className="container">
       <div className="invicible"></div>
-      <div>
-        <button onClick={() => navigate("/add-product")}>add product</button>
-      </div>
+      {products.map(elem => (
+        <div key={elem.id} elem={elem}>
+          {elem.author ? (
+            <button onClick={() => navigate("/add-product")}>
+              add product
+            </button>
+          ) : null}
+        </div>
+      ))}
 
       {products.map(item => (
         <ProductsCard key={item.id} item={item} />

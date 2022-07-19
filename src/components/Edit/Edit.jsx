@@ -15,6 +15,7 @@ import Select from "@mui/material/Select";
 import { PhotoCamera } from "@mui/icons-material";
 import { useNavigate, useParams } from "react-router-dom";
 import { productsContext } from "../../contexts/productContetx";
+import "../Edit/Edit.css";
 
 const Edit = () => {
   const navigate = useNavigate();
@@ -61,30 +62,36 @@ const Edit = () => {
   }
 
   return (
-    <Container maxWidth="sm">
-      <Box display={"flex"} flexDirection="column">
+    <div className="container" maxWidth="sm">
+      <div className="edit-block">
         <Typography variant="h6">Edit Product</Typography>
-        <TextField
+        <input
+          className="add-product-inp"
           value={title}
           onChange={e => setTitle(e.target.value)}
           label="Title"
           variant="outlined"
         />
-        <TextField
+        <input
+          className="add-product-inp"
           value={description}
           onChange={e => setDescription(e.target.value)}
           label="Description"
           variant="outlined"
         />
-        <TextField
+        <input
+          className="add-product-inp"
           value={price}
           onChange={e => setPrice(e.target.value)}
           label="Price"
           variant="outlined"
         />
-        <FormControl fullWidth>
-          <InputLabel id="demo-simple-select-label">Category</InputLabel>
+        <p className="cotegory-content">Cotegory</p>
+
+        <FormControl className="add-content" fullWidth>
+          {/* <InputLabel id="demo-simple-select-label">Category</InputLabel> */}
           <Select
+            className="add-cotegory"
             labelId="demo-simple-select-label"
             id="demo-simple-select"
             value={category}
@@ -112,11 +119,14 @@ const Edit = () => {
           </IconButton>
           {image ? <Typography variant="span">{image.name}</Typography> : null}
         </Box> */}
-        <Button onClick={handleSave} variant="contained">
+        {/* <Button onClick={handleSave} variant="contained">
           Save
-        </Button>
-      </Box>
-    </Container>
+        </Button> */}
+        <button className="add-peoduct-btn" onClick={handleSave}>
+          Save
+        </button>
+      </div>
+    </div>
   );
 };
 

@@ -1,0 +1,28 @@
+.edit-block {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+.add-product-inp {
+  margin-top: 20px;
+  padding: 10px;
+  border: 0;
+  box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
+  width: 50%;
+}
+.add-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.add-cotegory {
+  display: flex;
+  width: 50%;
+  margin-top: 10px;
+  justify-content: center;
+}
+.cotegory-content {
+  font-size: 20px;
+  margin-top: 20px;
+}
