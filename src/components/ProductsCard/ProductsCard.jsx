@@ -51,6 +51,10 @@ const ProductsCard = ({ item }) => {
               <button onClick={() => navigate(`/edit/${item.id}`)}>edit</button>
             </div>
           ) : null}
+
+          <button onClick={() => navigate(`/details/${item.id}`)}>
+            Details
+          </button>
         </div>
       </div>
     </div>
