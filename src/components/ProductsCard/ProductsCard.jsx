@@ -47,6 +47,9 @@ const ProductsCard = ({ item }) => {
           </div>
           <button onClick={() => deleteProduct(item.id)}>delete</button>
           <button onClick={() => navigate(`/edit/${item.id}`)}>edit</button>
+          <button onClick={() => navigate(`/details/${item.id}`)}>
+            Details
+          </button>
         </div>
       </div>
     </div>
