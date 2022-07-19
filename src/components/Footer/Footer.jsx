@@ -20,8 +20,9 @@ const Footer = () => {
       </div>
       <div className="footer-section-block">
         <div className="footer-section-content">
+
           <h4
-            onClick={() => navigate("/magazines")}
+            onClick={() => navigate("/register")}
             className="footer-intro-h4">
             Pегистрация
           </h4>
