@@ -6,13 +6,13 @@ import main_img3 from "../Media/main_img3.jpg";
 import main_img4 from "../Media/main_img4.jpg";
 import main_img7 from "../Media/main_img7.jpg";
 import main_img6 from "../Media/main_img6.jpg";
+import MainFooter from "../MainFooter/MainFooter";
 
 const Main = () => {
   return (
     <div className="container">
       <div className="main__content">
         <div className="main-content-block">
-          {/* vfioj */}
           <div className="main__content_first">
             <div className="main__content_1">
               <h1>
