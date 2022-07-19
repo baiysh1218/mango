@@ -115,11 +115,31 @@ const ProductsContextProvider = ({ children }) => {
         headers: { Authorization },
       };
       const res = await axios(`${API}/products/${id}/`, config);
-      console.log(res);
+      // console.log(res);
       dispatch({
         type: "GET_ONE_PRODUCT",
         payload: res.data,
       });
+    } catch (err) {
+      console.log(err);
+    }
+  }
+
+  async function updateProduct(id, editedProduct, navigate) {
+    try {
+      const tokens = JSON.parse(localStorage.getItem("tokens"));
+      //! config
+      const Authorization = `Bearer ${tokens.access}`;
+      const config = {
+        headers: { Authorization },
+      };
+      const res = await axios.patch(
+        `${API}/products/${id}/`,
+        editedProduct,
+        config
+      );
+      console.log(res);
+      navigate("/products-list");
     } catch (err) {
       console.log(err);
     }
@@ -136,6 +156,7 @@ const ProductsContextProvider = ({ children }) => {
         getProducts,
         deleteProduct,
         getOneProduct,
+        updateProduct,
       }}>
       {children}
     </productsContext.Provider>
