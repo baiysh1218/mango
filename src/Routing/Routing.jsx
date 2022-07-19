@@ -15,6 +15,7 @@ import Magazines from "../components/Magazines/Magazines";
 import Company from "../components/Company/Company";
 import Contact from "../components/Contact/Contact";
 import Loader from "../components/Loader/Loader";
+import Edit from "../components/Edit/Edit";
 
 const Routing = () => {
   const { loading, currentUser } = useContext(authContext);
@@ -33,7 +34,7 @@ const Routing = () => {
       <Route path="/register" element={<Register />} />
       <Route path="/magazines" element={<Magazines />} />
       <Route path="/company" element={<Company />} />
-
+      <Route path="/edit" element={<Edit />} />
       <Route path="/contact" element={<Contact />} />
       <Route
         path="/register-success"
