@@ -5,9 +5,10 @@
   font-family: "MangoSans";
 }
 .container {
-  width: 1583px;
+  max-width: 1583px;
 }
 .invicible {
-  width: 90%;
+  width: 100%;
   height: 70px;
+  margin-top: 0;
 }

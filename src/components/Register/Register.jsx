@@ -37,7 +37,7 @@ const Register = () => {
     <div className="container">
       <div className="regiseter-block">
         <div className="register-teg">
-          <Typography variant="h5">Register</Typography>
+          <h5 className="rgister-tag">Register</h5>
           {error ? (
             <div>
               {error.map((item, index) => (
@@ -48,7 +48,6 @@ const Register = () => {
             </div>
           ) : null}
           <div className="register-block">
-            huhjiikjn
             <input
               className="register-inp"
               value={email}
@@ -83,8 +82,14 @@ const Register = () => {
               variant="outlined">
               Register
             </button>
+            <span>если уже есть аккаунт войдите</span>
+            <button
+              className="register-btn"
+              onClick={() => navigate("/login")}
+              variant="outlined">
+              login
+            </button>
           </div>
-       
         </div>
       </div>
     </div>
