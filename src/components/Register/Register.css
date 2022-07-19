@@ -31,4 +31,10 @@
 .register-teg {
   display: flex;
   justify-content: center;
+  /* margin-bottom: 5%; */
+  flex-direction: column;
+}
+.rgister-tag {
+  font-size: 36px;
+  margin-top: 5%;
 }

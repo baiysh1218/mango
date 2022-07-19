@@ -16,28 +16,17 @@ const Footer = () => {
         <div className="footer-intro-title">
           <h1 className="footer-intro-h1">Женское</h1>
         </div>
-        <div className="footer-intro-main-block">
-          <div className="footer-intro-content">
-            <div className="footer-content">
-              <h3 className="footer-intro-h3">Одежда</h3>
-            </div>
-            <div>
-              <p className="footer-content-p">Accessories Edition</p>
-              <p className="footer-content-p">White Summer</p>
-              <p className="footer-content-p">Denim Shorts Guide</p>
-              <p className="footer-content-p">Платья и комбинезоны</p>
-              <p className="footer-content-p">Рубашки</p>
-              <p className="footer-content-p">Обувь</p>
-            </div>
-          </div>
-        </div>
+        <div className="footer-intro-main-block"></div>
       </div>
       <div className="footer-section-block">
         <div className="footer-section-content">
-          <h4 className="footer-intro-h4">Pегистрация</h4>
-          <h4 onClick={() => navigate("/contact")} className="footer-intro-h4">
-            Контактная информация
+
+          <h4
+            onClick={() => navigate("/register")}
+            className="footer-intro-h4">
+            Pегистрация
           </h4>
+          <h4 className="footer-intro-h4">Контактная информация</h4>
           <h4
             onClick={() => navigate("/magazines")}
             className="footer-intro-h4">

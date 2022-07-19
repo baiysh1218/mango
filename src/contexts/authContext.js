@@ -84,6 +84,7 @@ const AuthContextProvider = ({ children }) => {
         currentUser,
         loading,
         error,
+        currentUser,
         handleRegister,
         handleLogin,
         setError,

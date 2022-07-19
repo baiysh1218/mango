@@ -12,7 +12,11 @@
 .footer-main-block {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   margin-top: 80px;
+}
+.img-girls {
+  width: 360px;
 }
 @media (max-width: 1300px) {
   .prefooter-img {
@@ -29,6 +33,6 @@
 }
 @media (max-width: 370px) {
   .img-girls {
-    width: 80%;
+    width: 200px;
   }
 }

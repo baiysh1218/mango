@@ -12,50 +12,57 @@ import { useNavigate } from "react-router-dom";
 import { authContext } from "../../contexts/authContext";
 
 const Header = () => {
-  const { handleLogout } = useContext(authContext);
+  const { handleLogout, currentUser } = useContext(authContext);
   const navigate = useNavigate();
   return (
+    // <div className="container">
     <div className="navber-background">
-      <div className="navbar-block">
-        <div className="navbar-logo-block">
-          <img
-            onClick={() => navigate("/")}
-            className="logo-mango-navbar"
-            src="https://st.mngbcn.com/images/headerNew/logos/mango.svg"
-            alt=""
-          />
+      {/* <div className="navbar-block"> */}
+      <div className="navbar-logo-block">
+        <img
+          onClick={() => navigate("/")}
+          className="logo-mango-navbar"
+          src="https://st.mngbcn.com/images/headerNew/logos/mango.svg"
+          alt=""
+        />
+      </div>
+      <div className="navbar-block-icons">
+        <div className="navbar-icon-content-block">
+          <IconButton>
+            <ShoppingCartOutlinedIcon
+              onClick={() => navigate("/card")}
+              className="navbar-icon"
+            />
+          </IconButton>
+          <p className="navbar-icon-p">корзина</p>
         </div>
-        <div className="navbar-block-icons">
-          <div className="navbar-icon-content-block">
-            <IconButton>
-              <ShoppingCartOutlinedIcon
-                onClick={() => navigate("/card")}
-                className="navbar-icon"
-              />
-            </IconButton>
-            <p className="navbar-icon-p">корзина</p>
-          </div>
-          <div className="navbar-icon-content-block">
-            <IconButton onClick={() => navigate("/register")}>
-              <PermIdentityIcon className="navbar-icon" />
-            </IconButton>
-            <p className="navbar-icon-p">вход</p>
-          </div>
-          <div className="navbar-icon-content-block">
-            <IconButton onClick={() => handleLogout(navigate)}>
-              <PermIdentityIcon className="navbar-icon" />
-            </IconButton>
-            <p className="navbar-icon-p">logout</p>
-          </div>
-          <div className="navbar-icon-content-block">
-            <IconButton>
-              <FavoriteBorderIcon className="navbar-icon" />
-            </IconButton>
-            <p className="navbar-icon-p">избранные</p>
-          </div>
+        <div className="navbar-icon-content-block">
+          {currentUser ? (
+            <div>
+              <IconButton onClick={() => handleLogout(navigate)}>
+                <PermIdentityIcon className="navbar-icon" />
+              </IconButton>
+              <p className="navbar-icon-p">logout</p>
+            </div>
+          ) : (
+            <div>
+              <IconButton onClick={() => navigate("/register")}>
+                <PermIdentityIcon className="navbar-icon" />
+              </IconButton>
+              <p className="navbar-icon-p">login</p>
+            </div>
+          )}
+        </div>
+        <div className="navbar-icon-content-block">
+          <IconButton>
+            <FavoriteBorderIcon className="navbar-icon" />
+          </IconButton>
+          <p className="navbar-icon-p">избранные</p>
         </div>
       </div>
+      {/* </div> */}
     </div>
+    // </div>
   );
 };
 
