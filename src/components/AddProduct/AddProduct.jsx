@@ -49,108 +49,68 @@ const AddProduct = () => {
   return (
     <div className="container">
       <div className="add-product-content-block">
-        <h2>Add Product</h2>
-        <input
-          value={title}
-          onChange={e => setTitle(e.target.value)}
-          type={"text"}
-          placeholder={"title"}
-        />
-        <input
-          value={description}
-          onChange={e => setDescription(e.target.value)}
-          type={"text"}
-          placeholder={"description"}
-        />
-        <input
-          value={price}
-          onChange={e => setPrice(e.target.value)}
-          type={"number"}
-          placeholder={"price"}
-        />
+        <div className="add-product-block">
+          <h2>Add Product</h2>
+          <input
+            className="add-product-inp"
+            value={title}
+            onChange={e => setTitle(e.target.value)}
+            type={"text"}
+            placeholder={"title"}
+          />
+          <input
+            className="add-product-inp"
+            value={description}
+            onChange={e => setDescription(e.target.value)}
+            type={"text"}
+            placeholder={"description"}
+          />
+          <input
+            className="add-product-inp"
+            value={price}
+            onChange={e => setPrice(e.target.value)}
+            type={"number"}
+            placeholder={"price"}
+          />
+          <p className="cotegory-content">Cotegory</p>
 
-        <FormControl fullWidth>
-          <InputLabel id="demo-simple-select-label">Category</InputLabel>
-          <Select
-            labelId="demo-simple-select-label"
-            id="demo-simple-select"
-            value={category}
-            label="Category"
-            onChange={e => setCategory(e.target.value)}>
-            {categories.map(item => (
-              <MenuItem key={item.title} value={item.title}>
-                {item.title}
-              </MenuItem>
-            ))}
-          </Select>
-        </FormControl>
-        <Box>
-          <IconButton
-            color="primary"
-            aria-label="upload picture"
-            component="label">
-            <input
-              hidden
-              accept="image/*"
-              type="file"
-              onChange={e => setImage(e.target.files[0])}
-            />
-            <PhotoCamera />
-          </IconButton>
-          {image ? <Typography variant="span">{image.name}</Typography> : null}
-        </Box>
-        <Box>
-          <IconButton
-            color="primary"
-            aria-label="upload picture"
-            component="label">
-            <input
-              hidden
-              accept="image/*"
-              type="file"
-              onChange={e => setImage2(e.target.files[0])}
-            />
-            <PhotoCamera />
-          </IconButton>
-          {image2 ? (
-            <Typography variant="span">{image2.name}</Typography>
-          ) : null}
-        </Box>
-        <Box>
-          <IconButton
-            color="primary"
-            aria-label="upload picture"
-            component="label">
-            <input
-              hidden
-              accept="image/*"
-              type="file"
-              onChange={e => setImage3(e.target.files[0])}
-            />
-            <PhotoCamera />
-          </IconButton>
-          {image3 ? (
-            <Typography variant="span">{image3.name}</Typography>
-          ) : null}
-        </Box>
-        <Box>
-          <IconButton
-            color="primary"
-            aria-label="upload picture"
-            component="label">
-            <input
-              hidden
-              accept="image/*"
-              type="file"
-              onChange={e => setImage4(e.target.files[0])}
-            />
-            <PhotoCamera />
-          </IconButton>
-          {image4 ? (
-            <Typography variant="span">{image4.name}</Typography>
-          ) : null}
-        </Box>
-        <button onClick={handleSave}>add product</button>
+          <FormControl fullWidth className="add-content">
+            {/* <InputLabel id="demo-simple-select-label">Category</InputLabel> */}
+            <Select
+              className="add-cotegory"
+              labelId="demo-simple-select-label"
+              id="demo-simple-select"
+              value={category}
+              label="Category"
+              onChange={e => setCategory(e.target.value)}>
+              {categories.map(item => (
+                <MenuItem key={item.title} value={item.title}>
+                  {item.title}
+                </MenuItem>
+              ))}
+            </Select>
+          </FormControl>
+          <Box>
+            <IconButton
+              color="primary"
+              aria-label="upload picture"
+              component="label">
+              <input
+                hidden
+                accept="image/*"
+                type="file"
+                onChange={e => setImage(e.target.files[0])}
+              />
+              <PhotoCamera />
+            </IconButton>
+            {image ? (
+              <Typography variant="span">{image.name}</Typography>
+            ) : null}
+          </Box>
+          <button className="add-peoduct-btn" onClick={handleSave}>
+            add product
+          </button>
+        </div>
       </div>
     </div>
   );

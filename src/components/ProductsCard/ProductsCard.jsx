@@ -45,8 +45,13 @@ const ProductsCard = ({ item }) => {
               </IconButton>
             </div>
           </div>
-          <button onClick={() => deleteProduct(item.id)}>delete</button>
-          <button onClick={() => navigate(`/edit/${item.id}`)}>edit</button>
+          {item.authir ? (
+            <div>
+              <button onClick={() => deleteProduct(item.id)}>delete</button>
+              <button onClick={() => navigate(`/edit/${item.id}`)}>edit</button>
+            </div>
+          ) : null}
+
           <button onClick={() => navigate(`/details/${item.id}`)}>
             Details
           </button>
