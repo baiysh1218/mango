@@ -34,7 +34,7 @@ const Routing = () => {
       <Route path="/register" element={<Register />} />
       <Route path="/magazines" element={<Magazines />} />
       <Route path="/company" element={<Company />} />
-      <Route path="/edit" element={<Edit />} />
+      <Route path="/edit/:id" element={<Edit />} />
       <Route path="/contact" element={<Contact />} />
       <Route
         path="/register-success"

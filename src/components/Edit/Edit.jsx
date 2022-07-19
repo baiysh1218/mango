@@ -31,19 +31,19 @@ const Edit = () => {
   const [description, setDescription] = useState("");
   const [price, setPrice] = useState("");
   const [category, setCategory] = useState("");
-  const [image, setImage] = useState(null);
+  // const [image, setImage] = useState(null);
   // console.log(image);
   useEffect(() => {
     getCategories();
     getOneProduct(id);
   }, []);
-  // console.log(categories);
+  // console.log(oneProduct);
   useEffect(() => {
     if (oneProduct) {
       setTitle(oneProduct.title);
       setDescription(oneProduct.description);
       setPrice(oneProduct.price);
-      setCategory(oneProduct.category.id);
+      setCategory(oneProduct.category.title);
     }
   }, [oneProduct]);
 
@@ -53,10 +53,10 @@ const Edit = () => {
     editedProduct.append("description", description);
     editedProduct.append("price", price);
     editedProduct.append("category", category);
-    editedProduct.append("image", image);
-    if (image) {
-      editedProduct.append("image", image);
-    }
+    // editedProduct.append("image", image);
+    // if (image) {
+    //   editedProduct.append("image", image);
+    // }
     updateProduct(id, editedProduct, navigate);
   }
 
@@ -97,7 +97,7 @@ const Edit = () => {
             ))}
           </Select>
         </FormControl>
-        <Box>
+        {/* <Box>
           <IconButton
             color="primary"
             aria-label="upload picture"
@@ -111,7 +111,7 @@ const Edit = () => {
             <PhotoCamera />
           </IconButton>
           {image ? <Typography variant="span">{image.name}</Typography> : null}
-        </Box>
+        </Box> */}
         <Button onClick={handleSave} variant="contained">
           Save
         </Button>

@@ -10,13 +10,13 @@ import { useNavigate } from "react-router-dom";
 import { productsContext } from "../../contexts/productContetx";
 
 const ProductsCard = ({ item }) => {
-  console.log(item);
+  // console.log(item);
   const { addToCart, checkProductInCart } = useContext(cartContext);
   const { deleteProduct } = useContext(productsContext);
   const navigate = useNavigate();
   const [productCart, setProductCart] = useState(checkProductInCart(item.id));
 
-  console.log(item);
+  // console.log(item);
   return (
     <div className="card-block">
       <div className="card-content-block">
