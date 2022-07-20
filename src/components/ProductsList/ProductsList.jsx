@@ -9,6 +9,7 @@ import "../ProductsList/ProductList.css";
 
 const ProductsList = () => {
   const { products, getProducts } = useContext(productsContext);
+  console.log(products);
   const navigate = useNavigate();
   useEffect(() => {
     getProducts();
@@ -19,7 +20,7 @@ const ProductsList = () => {
       <div className="invicible"></div>
       {products.map(elem => (
         <div key={elem.id} elem={elem}>
-          {elem.author ? (
+          {elem.user ? (
             <button onClick={() => navigate("/add-product")}>
               add product
             </button>
