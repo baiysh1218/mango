@@ -59,12 +59,13 @@ const ProductsCard = ({ item }) => {
               </IconButton> */}
             </div>
           </div>
-          {/* {item.author ? ( */}
-          <div>
-            <button onClick={() => deleteProduct(item.id)}>delete</button>
-            <button onClick={() => navigate(`/edit/${item.id}`)}>edit</button>
-          </div>
-          {/* ) : null} */}
+
+          {item.admin ? (
+            <div>
+              <button onClick={() => deleteProduct(item.id)}>delete</button>
+              <button onClick={() => navigate(`/edit/${item.id}`)}>edit</button>
+            </div>
+          ) : null}
 
           <button onClick={() => navigate(`/details/${item.id}`)}>
             Details
