@@ -13,7 +13,7 @@ const ProductsList = () => {
   useEffect(() => {
     getProducts();
   }, []);
-  console.log(products);
+  // console.log(products);
   return (
     <div className="container">
       <div className="invicible"></div>
