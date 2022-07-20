@@ -22,12 +22,12 @@ const AddProduct = () => {
   const navigate = useNavigate();
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
-  const [price, setPrice] = useState("");
+  const [price, setPrice] = useState(0);
   const [category, setCategory] = useState("");
   const [image, setImage] = useState(null);
-  const [image2, setImage2] = useState(null);
-  const [image3, setImage3] = useState(null);
-  const [image4, setImage4] = useState(null);
+  // const [image2, setImage2] = useState(null);
+  // const [image3, setImage3] = useState(null);
+  // const [image4, setImage4] = useState(null);
 
   useEffect(() => {
     getCategories();
@@ -41,9 +41,9 @@ const AddProduct = () => {
     newProduct.append("price", price);
     newProduct.append("category", category);
     newProduct.append("image", image);
-    newProduct.append("image2", image2);
-    newProduct.append("image3", image3);
-    newProduct.append("image4", image4);
+    // newProduct.append("image2", image2);
+    // newProduct.append("image3", image3);
+    // newProduct.append("image4", image4);
     createProduct(newProduct, navigate);
   }
   return (
@@ -72,7 +72,7 @@ const AddProduct = () => {
             type={"number"}
             placeholder={"price"}
           />
-          <p className="cotegory-content">Cotegory</p>
+          <p className="cotegory-content">Category</p>
 
           <FormControl fullWidth className="add-content">
             {/* <InputLabel id="demo-simple-select-label">Category</InputLabel> */}
