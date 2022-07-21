@@ -42,7 +42,7 @@ const ProductsList = () => {
   }, [searchParams]);
 
   return (
-    <div className="container">
+    // <div className="container">
       <div className="product-list-block">
         <div className="products-filter-price">
           <input
@@ -89,8 +89,7 @@ const ProductsList = () => {
           />
         </div>
       </div>
-    </div>
-  );
+    // </div>
 };
 
 export default ProductsList;

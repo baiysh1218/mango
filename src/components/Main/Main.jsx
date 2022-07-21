@@ -10,7 +10,7 @@ import MainFooter from "../MainFooter/MainFooter";
 
 const Main = () => {
   return (
-    <div className="container">
+    // <div className="container">
       <div className="main__content">
         <div className="main-content-block">
           <div className="main__content_first">
@@ -59,7 +59,7 @@ const Main = () => {
           {/* ncnkdl */}
         </div>
       </div>
-    </div>
+    // </div>
   );
 };
 

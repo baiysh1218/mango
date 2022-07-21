@@ -62,7 +62,7 @@ const Edit = () => {
   }
 
   return (
-    <div className="container" maxWidth="sm">
+    // <div className="container" maxWidth="sm">
       <div className="edit-block">
         <Typography variant="h6">Edit Product</Typography>
         <input
@@ -126,7 +126,7 @@ const Edit = () => {
           Save
         </button>
       </div>
-    </div>
+    // </div>
   );
 };
 

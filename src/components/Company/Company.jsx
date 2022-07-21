@@ -58,7 +58,7 @@ const Company = () => {
     setActiveStep(step);
   };
   return (
-    <div className="container">
+    // <div className="container">
       <div className="company-cont">
         <div className="company-text">
           <h2 className="company-h2">
@@ -232,7 +232,7 @@ const Company = () => {
           </Box>
         </div>
       </div>
-    </div>
+    // </div>
   );
 };
 

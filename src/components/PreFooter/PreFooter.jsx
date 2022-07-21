@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 const PreFooter = () => {
   const navigate = useNavigate();
   return (
-    <div className="container">
+    // <div className="container">
       <div className="footer-main-block">
         <div className="prefooter-logo">
           <h2>#MANGOGIRLS</h2>
@@ -41,7 +41,7 @@ const PreFooter = () => {
           />
         </div>
       </div>
-    </div>
+    // </div>
   );
 };
 
