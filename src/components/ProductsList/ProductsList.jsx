@@ -51,6 +51,13 @@ const ProductsList = () => {
   return (
     // <div className="container">
     <div className="product-list-block">
+      <div className="product-list-main-img">
+        <img
+          className="img-main-products-list"
+          src="https://staticpages.mngbcn.com/homes/images/ss22/she/mayo/she_interior_whitesummer_1705.jpg?imwidth=1583&imdensity=1"
+          alt=""
+        />
+      </div>
       <div className="products-filter-price">
         <div className="search-block">
           <input

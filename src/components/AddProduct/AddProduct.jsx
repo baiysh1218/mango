@@ -45,9 +45,10 @@ const AddProduct = () => {
     newProduct.append("category", category);
     newProduct.append("image", image);
 
-    createProduct(newProduct, navigate);
+    createProduct(newProduct, navigate("/products-list"));
   }
   return (
+    // <div className="container">
     <div className="add-product-content-block">
       <div className="add-product-block">
         <h2>Add Product</h2>
@@ -91,6 +92,7 @@ const AddProduct = () => {
             ))}
           </Select>
         </FormControl>
+
         <Box className="inp-img">
           <IconButton
             color="primary"
@@ -106,11 +108,14 @@ const AddProduct = () => {
           </IconButton>
           {image ? <Typography variant="span">{image.name}</Typography> : null}
         </Box>
-        <button className="add-peoduct-btn" onClick={handleSave}>
-          add product
-        </button>
+        <div className="add-product-btn-block">
+          <button className="add-peoduct-btn" onClick={handleSave}>
+            add product
+          </button>
+        </div>
       </div>
     </div>
+    // </div>
   );
 };
 

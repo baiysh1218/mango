@@ -80,6 +80,9 @@ const ProductsCard = ({ item }) => {
                   // color="error"
                 />
               </IconButton>
+            <div>
+              <button onClick={() => deleteProduct(item.id)}>delete</button>
+              <button onClick={() => navigate(`/edit/${item.id}`)}>edit</button>
             </div>
             <Stack spacing={rating}>
               <Rating
@@ -89,6 +92,7 @@ const ProductsCard = ({ item }) => {
                 size="large"
               />
             </Stack>
+          </div>
           </div>
         </div>
       </div>

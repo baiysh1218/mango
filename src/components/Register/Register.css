@@ -2,11 +2,15 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-left: 23%;
+  align-items: center;
+  /* width: 70%; */
+  /* margin-left: 23%; */
 }
 .register-inp {
   padding: 10px;
-  width: 210px;
+  /* width: 210px; */
+  width: 90%;
+
   border: 0;
   box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.218);
   margin-top: 35px;
@@ -14,9 +18,9 @@
   justify-content: center;
 }
 .register-btn {
-  width: 170px;
-  padding: 3% 0;
-  margin-top: 15%;
+  width: 70%;
+  padding: 4% 0;
+  /* margin-top: 15%; */
   border: 0;
   background-color: rgb(67, 195, 255);
   border-radius: 20px;
@@ -24,15 +28,20 @@
   box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.218);
   margin-top: 30px;
   margin-bottom: 10%;
-  margin-left: 5%;
+  /* margin-left: 5%; */
+  /* width: 30%; */
 }
 .regiseter-block {
-  background-color: rgba(33, 107, 192, 0.633);
-  width: 30%;
-  border-radius: 20px;
+  /* background-color: rgba(33, 107, 192, 0.633); */
+  width: 470px;
+  /* height: 0%; */
+  /* border-radius: 20px; */
   margin-top: 4%;
-  box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.218);
-  margin-left: 35%;
+  /* box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.218); */
+  /* margin-left: 35%; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .register-teg {
   display: flex;
@@ -44,5 +53,22 @@
 .rgister-tag {
   font-size: 36px;
   margin-top: 5%;
-  margin-left: 30%;
+  /* margin-left: 30%; */
+  /* width: 30%; */
+}
+.register-width {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.register-width {
+  font-size: 12px;
+}
+@media all and (max-width: 400px) {
+  .register-inp {
+    width: 70%;
+  }
+  .rgister-tag {
+    font-size: 16px;
+  }
 }

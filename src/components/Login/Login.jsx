@@ -30,10 +30,9 @@ const Login = () => {
   }, []);
 
   return (
-
-    // <div className="container">
+    <div className="container">
       <div className="login-block-style">
-        <div display={"flex"} flexDirection={"column"} marginTop={"50px"}>
+        <div className="login-block-inp-log">
           <Typography variant="h3" className="type-login">
             login
           </Typography>
@@ -58,8 +57,7 @@ const Login = () => {
           </div>
         </div>
       </div>
-    // </div>
-
+    </div>
   );
 };
 
