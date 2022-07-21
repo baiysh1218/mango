@@ -5,6 +5,8 @@ import InfoIcon from "@mui/icons-material/Info";
 import DeleteIcon from "@mui/icons-material/Delete";
 import EditIcon from "@mui/icons-material/Edit";
 import { IconButton } from "@mui/material";
+import Rating from "@mui/material/Rating";
+import Stack from "@mui/material/Stack";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import { cartContext } from "../../contexts/cardContext";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
@@ -18,7 +20,7 @@ const ProductsCard = ({ item }) => {
   const { deleteProduct, toggleLike } = useContext(productsContext);
   const navigate = useNavigate();
   const [productCart, setProductCart] = useState(checkProductInCart(item.id));
-
+  const [rating, setRating] = useState(0);
   return (
     <div className="card-block">
       <div className="card-content-block">
@@ -31,6 +33,7 @@ const ProductsCard = ({ item }) => {
               <p>{item.title}</p>
               <p>{item.price}</p>
               Likes: {item.like} <br />
+              rating: {item.rating}
             </div>
             <div className="card-icon-block">
               <IconButton
@@ -74,6 +77,14 @@ const ProductsCard = ({ item }) => {
                 />
               </IconButton>
             </div>
+            <Stack spacing={rating}>
+              <Rating
+                name="size-large"
+                defaultValue={rating}
+                onChange={e => setRating(e.target.value)}
+                size="large"
+              />
+            </Stack>
           </div>
         </div>
       </div>

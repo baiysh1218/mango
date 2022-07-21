@@ -32,7 +32,7 @@ const ProductsList = () => {
     setSearchParams({
       q: search,
       _page: currentPage,
-      _limit: 6,
+      // _limit: 6,
       price_gte: price[0],
       price_lte: price[1],
     });
