@@ -5,7 +5,7 @@ import EmailIcon from "@mui/icons-material/Email";
 
 const Contact = () => {
   return (
-    // <div className="container">
+    <div className="container">
       <div className="contact">
         <div className="contact__text">
           <p> /ЗДРАВСТВУЙТЕ, МЫ ХОТИМ ПОМОЧЬ ВАМ./ </p>
@@ -41,7 +41,7 @@ const Contact = () => {
           </p>
         </div>
       </div>
-    // </div>
+    </div>
   );
 };
 
