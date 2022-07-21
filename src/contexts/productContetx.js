@@ -169,23 +169,6 @@ const ProductsContextProvider = ({ children }) => {
     }
   }
 
-  async function getSearch() {
-    try {
-      // const tokens = JSON.parse(localStorage.getItem("tokens"));
-      // //! config
-      // const Authorization = `Bearer ${tokens.access}`;
-      // const config = {
-      //   headers: { Authorization },
-      // };
-      const res = await axios(`${API}/products/search/`);
-      getProducts();
-      console.log(res);
-    } catch (err) {
-      console.log(err);
-    }
-  }
-  getSearch();
-
   return (
     <productsContext.Provider
       value={{
@@ -200,7 +183,6 @@ const ProductsContextProvider = ({ children }) => {
         getOneProduct,
         updateProduct,
         toggleLike,
-        getSearch,
       }}>
       {children}
     </productsContext.Provider>
