@@ -13,9 +13,9 @@ import { useNavigate } from "react-router-dom";
 import { productsContext } from "../../contexts/productContetx";
 
 const ProductsCard = ({ item }) => {
-  console.log(item);
+  // console.log(item.image);
   const { addToCart, checkProductInCart } = useContext(cartContext);
-  const { deleteProduct, toggleLike, addLike } = useContext(productsContext);
+  const { deleteProduct, toggleLike } = useContext(productsContext);
   const navigate = useNavigate();
   const [productCart, setProductCart] = useState(checkProductInCart(item.id));
 
@@ -65,11 +65,11 @@ const ProductsCard = ({ item }) => {
                 </button> */}
               </div>
 
-              <IconButton onClick={() => addLike(item.id)}>
+              <IconButton onClick={() => toggleLike(item.id)}>
                 {item.like}
 
                 <FavoriteIcon
-                  color={item.like === 0 ? "black" : "error"}
+                  color={item.like ? "error" : "black"}
                   // color="error"
                 />
               </IconButton>
