@@ -1,6 +1,9 @@
 import React, { useContext, useEffect, useState } from "react";
 import "../ProductsCard/ProductCard.css";
 import AddShoppingCartOutlinedIcon from "@mui/icons-material/AddShoppingCartOutlined";
+import InfoIcon from "@mui/icons-material/Info";
+import DeleteIcon from "@mui/icons-material/Delete";
+import EditIcon from "@mui/icons-material/Edit";
 import { IconButton } from "@mui/material";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import { cartContext } from "../../contexts/cardContext";
@@ -42,15 +45,24 @@ const ProductsCard = ({ item }) => {
                   <ShoppingCartOutlinedIcon />
                 )}
               </IconButton>
+              <IconButton onClick={() => navigate(`/details/${item.id}`)}>
+                <InfoIcon />
+              </IconButton>
+              {/* <button onClick={() => navigate(`/details/${item.id}`)}>
+                  Details
+                </button> */}
 
-              <button onClick={() => navigate(`/details/${item.id}`)}>
-                Details
-              </button>
               <div>
-                <button onClick={() => deleteProduct(item.id)}>delete</button>
-                <button onClick={() => navigate(`/edit/${item.id}`)}>
+                <IconButton onClick={() => deleteProduct(item.id)}>
+                  <DeleteIcon />
+                </IconButton>
+                {/* <button onClick={() => deleteProduct(item.id)}>delete</button> */}
+                <IconButton onClick={() => navigate(`/edit/${item.id}`)}>
+                  <EditIcon />
+                </IconButton>
+                {/* <button onClick={() => navigate(`/edit/${item.id}`)}>
                   edit
-                </button>
+                </button> */}
               </div>
 
               <IconButton onClick={() => toggleLike(item.id)}>
