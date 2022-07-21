@@ -22,4 +22,12 @@
 }
 .card-block {
   margin-top: 50%;
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  margin-left: 35%;
+}
+.card-icon-block {
+  display: flex;
+  align-items: center;
 }
