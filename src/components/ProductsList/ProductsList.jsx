@@ -10,7 +10,8 @@ import ProductsCard from "../ProductsCard/ProductsCard";
 import "../ProductsList/ProductList.css";
 
 const ProductsList = () => {
-  const { products, getProducts, pages } = useContext(productsContext);
+  const { products, getProducts, pages, categories } =
+    useContext(productsContext);
   console.log(pages);
   const [searchParams, setSearchParams] = useSearchParams();
 
@@ -35,7 +36,7 @@ const ProductsList = () => {
   useEffect(() => {
     getProducts();
   }, [searchParams]);
-
+  console.log(categories);
   useEffect(() => {
     setSearchParams({
       q: search,
@@ -51,7 +52,6 @@ const ProductsList = () => {
     // <div className="container">
     <div className="product-list-block">
       <div className="products-filter-price">
-
         <div className="search-block">
           <input
             value={search}
@@ -90,8 +90,12 @@ const ProductsList = () => {
       </div>
 
       {products.map(item => (
-        <ProductsCard key={item.id} item={item} />
+        <>
+          {item.cate}
+          <ProductsCard key={item.id} item={item} />
+        </>
       ))}
+
       <div className="pagination">
         <Pagination
           page={currentPage}

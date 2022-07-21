@@ -32,7 +32,7 @@ const AddProduct = () => {
   useEffect(() => {
     getCategories();
   }, []);
-  // console.log(categories);
+  console.log(categories);
 
   function handleSave() {
     let newProduct = new FormData();
@@ -41,13 +41,9 @@ const AddProduct = () => {
     newProduct.append("price", price);
     newProduct.append("category", category);
     newProduct.append("image", image);
-    // newProduct.append("image2", image2);
-    // newProduct.append("image3", image3);
-    // newProduct.append("image4", image4);
     createProduct(newProduct, navigate);
   }
   return (
-    // <div className="container">
     <div className="add-product-content-block">
       <div className="add-product-block">
         <h2>Add Product</h2>
@@ -110,7 +106,6 @@ const AddProduct = () => {
         </button>
       </div>
     </div>
-    // </div>
   );
 };
 
