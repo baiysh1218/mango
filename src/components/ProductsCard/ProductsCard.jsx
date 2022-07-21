@@ -5,6 +5,8 @@ import InfoIcon from "@mui/icons-material/Info";
 import DeleteIcon from "@mui/icons-material/Delete";
 import EditIcon from "@mui/icons-material/Edit";
 import { IconButton } from "@mui/material";
+import Rating from "@mui/material/Rating";
+import Stack from "@mui/material/Stack";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import { cartContext } from "../../contexts/cardContext";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
@@ -18,7 +20,8 @@ const ProductsCard = ({ item }) => {
   const { deleteProduct, toggleLike } = useContext(productsContext);
   const navigate = useNavigate();
   const [productCart, setProductCart] = useState(checkProductInCart(item.id));
-
+  const [rating, setRating] = useState(0);
+  // console.log(item.author);
   return (
     <div className="card-block">
       <div className="card-content-block">
@@ -30,7 +33,6 @@ const ProductsCard = ({ item }) => {
             <div className="card-title">
               <p>{item.title}</p>
               <p>{item.price}</p>
-              Likes: {item.like} <br />
             </div>
             <div className="card-icon-block">
               <IconButton
@@ -53,13 +55,18 @@ const ProductsCard = ({ item }) => {
                 </button> */}
 
               <div>
-                <IconButton onClick={() => deleteProduct(item.id)}>
-                  <DeleteIcon />
-                </IconButton>
-                {/* <button onClick={() => deleteProduct(item.id)}>delete</button> */}
-                <IconButton onClick={() => navigate(`/edit/${item.id}`)}>
-                  <EditIcon />
-                </IconButton>
+                {item.author ? (
+                  <div>
+                    <IconButton onClick={() => deleteProduct(item.id)}>
+                      <DeleteIcon />
+                    </IconButton>
+                    {/* <button onClick={() => deleteProduct(item.id)}>delete</button> */}
+                    <IconButton onClick={() => navigate(`/edit/${item.id}`)}>
+                      <EditIcon />
+                    </IconButton>
+                  </div>
+                ) : null}
+
                 {/* <button onClick={() => navigate(`/edit/${item.id}`)}>
                   edit
                 </button> */}
@@ -77,6 +84,14 @@ const ProductsCard = ({ item }) => {
               <button onClick={() => deleteProduct(item.id)}>delete</button>
               <button onClick={() => navigate(`/edit/${item.id}`)}>edit</button>
             </div>
+            <Stack spacing={rating}>
+              <Rating
+                name="size-large"
+                defaultValue={rating}
+                onChange={e => setRating(e.target.value)}
+                size="large"
+              />
+            </Stack>
           </div>
           </div>
         </div>

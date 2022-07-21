@@ -23,13 +23,13 @@ const images = [
   },
   {
     label:
-      "BToni Ruiz / Chief Executive Officer (CEO) Since March 2020, Toni Ruiz has occupied the position of Mango Chief Executive Officer and a Member of the Board of Directors since 2015",
+      "BToni Ruiz / Chief Executive Officer Since March 2020, Toni Ruiz has occupied the position of Mango Chief Executive Officer and  Member of the Board of Directors since 2015",
     imgPath:
       "https://staticpages.mngbcn.com/edits/FW20/SITEEMPRESA2020/assets/images/normal/a_empresa-mango-2020_10.jpg?rand=2222&imwidth=605&imdensity=2",
   },
   {
     label:
-      "Jonathan Andic / Director of Mango Man and Construction Management Jonathan Andic occupies the post of Director of Mango Man and construction management and has been a member of the MANGO Board of Directors since 2012",
+      "Jonathan Andic / Director of Mango Man and Construction Management Jonathan Andic and a member of the MANGO Board of Directors since 2012",
     imgPath:
       "https://staticpages.mngbcn.com/edits/FW20/SITEEMPRESA2020/assets/images/normal/a_empresa-mango-2020_11.jpg?rand=2222&imwidth=605&imdensity=2",
   },
@@ -58,7 +58,7 @@ const Company = () => {
     setActiveStep(step);
   };
   return (
-    // <div className="container">
+    <div className="container">
       <div className="company-cont">
         <div className="company-child">
           <div className="company-text">
@@ -87,7 +87,7 @@ const Company = () => {
             </p>
           </div>
         </div>
-        <div className="our-collections">
+        <div className="our-collections-main">
           <h6 className="our-collections">OUR COLLECTIONS</h6>
           <p className="our-collections-p">
             Our Woman, Man and Kids collections reflect, by paying attention to
@@ -157,9 +157,8 @@ const Company = () => {
             our history.
           </p>
         </div>
-
         <div className="carousel">
-          <Box c sx={{ maxWidth: 1000, flexGrow: 1 }}>
+          <Box className="box-carousel" sx={{ maxWidth: 900, flexGrow: 1 }}>
             <Paper
               square
               elevation={0}
@@ -190,6 +189,7 @@ const Company = () => {
                         maxWidth: 1000,
                         overflow: "hidden",
                         width: "100%",
+                        height: "100%",
                       }}
                       src={step.imgPath}
                       alt={step.label}
@@ -235,7 +235,7 @@ const Company = () => {
           </Box>
         </div>
       </div>
-    // </div>
+    </div>
   );
 };
 

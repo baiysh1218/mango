@@ -28,3 +28,15 @@
 .week {
   color: rgb(94, 92, 92);
 }
+@media all and (max-width: 800px) {
+  .two-magazines {
+    display: flex;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+  }
+}
+@media all and (max-width: 800px) {
+  .second-magazines {
+    margin-top: 50px;
+  }
+}
