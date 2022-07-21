@@ -4,7 +4,6 @@ import AboutUs from "../components/AboutUs/AboutUs";
 import AddProduct from "../components/AddProduct/AddProduct";
 import Intro from "../components/Intro/Intro";
 import ProductsList from "../components/ProductsList/ProductsList";
-import ProductsUserList from "../components/ProductsUserList/ProductsUserList";
 import CreditCard from "../components/CreditCard/CreditCard";
 import Card from "../components/Card/Card";
 import Register from "../components/Register/Register";
@@ -29,7 +28,6 @@ const Routing = () => {
       <Route path="/about-us" element={<AboutUs />} />
       <Route path="/add-product" element={<AddProduct />} />
       <Route path="/products-list" element={<ProductsList />} />
-      <Route path="/products-user-list" element={<ProductsUserList />} />
       <Route path="/credit-card" element={<CreditCard />} />
       <Route path="/card" element={<Card />} />
       <Route path="/register" element={<Register />} />
@@ -38,6 +36,7 @@ const Routing = () => {
       <Route path="/edit/:id" element={<Edit />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/details/:id" element={<DetailsProduct />} />
+
       <Route
         path="/register-success"
         element={
