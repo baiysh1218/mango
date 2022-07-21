@@ -47,36 +47,42 @@ const ProductsList = () => {
     // <div className="container">
     <div className="product-list-block">
       <div className="products-filter-price">
-        <input
-          value={search}
-          className="all-product-input0-search"
-          onChange={e => setSearch(e.target.value)}
-          placeholder="search"
-        />
-        <Slider
-          color="secondary"
-          className="slider-all-product"
-          getAriaLabel={() => "Temperature range"}
-          value={price}
-          onChange={(e, value) => {
-            console.log(value);
-            setPrice(value);
-          }}
-          min={1}
-          max={500}
-          step={10}
-          valueLabelDisplay="auto"
-        />
-      </div>
-      {products.map(elem => (
-        <div key={elem.id} elem={elem}>
-          {elem.user ? (
-            <button onClick={() => navigate("/add-product")}>
-              add product
-            </button>
-          ) : null}
+        <div className="search-block">
+          <input
+            value={search}
+            className="all-product-input0-search"
+            onChange={e => setSearch(e.target.value)}
+            placeholder="search"
+          />
         </div>
-      ))}
+        <div className="slider-block">
+          <Slider
+            color="secondary"
+            className="slider-all-product"
+            getAriaLabel={() => "Temperature range"}
+            value={price}
+            onChange={(e, value) => {
+              console.log(value);
+              setPrice(value);
+            }}
+            min={1}
+            max={500}
+            step={10}
+            valueLabelDisplay="auto"
+          />
+        </div>
+        {products.map(elem => (
+          <div className="btn-block-add" key={elem.id} elem={elem}>
+            {elem.author ? (
+              <button
+                className="add-pruct-btn-list"
+                onClick={() => navigate("/add-product")}>
+                add product
+              </button>
+            ) : null}
+          </div>
+        ))}
+      </div>
 
       {products.map(item => (
         <ProductsCard key={item.id} item={item} />

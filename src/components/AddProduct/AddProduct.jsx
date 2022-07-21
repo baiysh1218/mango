@@ -90,7 +90,7 @@ const AddProduct = () => {
             ))}
           </Select>
         </FormControl>
-        <Box>
+        <Box className="inp-img">
           <IconButton
             color="primary"
             aria-label="upload picture"
