@@ -35,7 +35,7 @@ const ProductsContextProvider = ({ children }) => {
 
   async function getProducts() {
     try {
-      // console.log(res.data.count);
+      console.log(res.data.count);
       // console.log(res.data.results);
       const tokens = JSON.parse(localStorage.getItem("tokens"));
       //! config

@@ -62,11 +62,11 @@ const ProductsCard = ({ item }) => {
                   // color="error"
                 />
               </IconButton>
-          {item.user ? (
             <div>
               <button onClick={() => deleteProduct(item.id)}>delete</button>
               <button onClick={() => navigate(`/edit/${item.id}`)}>edit</button>
             </div>
+          </div>
           </div>
         </div>
       </div>
