@@ -17,8 +17,9 @@ import "../AddProduct/AddProduct.css";
 import { useNavigate } from "react-router-dom";
 
 const AddProduct = () => {
-  const { createProduct, categories, getCategories } =
-    useContext(productsContext);
+  const { createProduct, categories, getCategories } = useContext(
+    productsContext
+  );
   const navigate = useNavigate();
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
@@ -86,6 +87,7 @@ const AddProduct = () => {
             ))}
           </Select>
         </FormControl>
+
         <Box className="inp-img">
           <IconButton
             color="primary"
