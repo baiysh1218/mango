@@ -41,7 +41,7 @@ const AddProduct = () => {
     newProduct.append("price", price);
     newProduct.append("category", category);
     newProduct.append("image", image);
-    createProduct(newProduct, navigate);
+    createProduct(newProduct, navigate("/products-list"));
   }
   return (
     // <div className="container">
