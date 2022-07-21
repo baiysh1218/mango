@@ -5,6 +5,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { productsContext } from "../../contexts/productContetx";
 import Loader from "../Loader/Loader";
 // import Reviews from "../Reviews/Reviews";
+import "../DetailsProduct/Deatils.css";
 
 const DetailsProduct = () => {
   const { id } = useParams();
@@ -20,15 +21,18 @@ const DetailsProduct = () => {
   // console.log(oneProduct);
 
   return (
-    <Container>
-      <Typography variant="h5">Title: {oneProduct.title}</Typography>
-      <Typography variant="h5">Price: {oneProduct.price}</Typography>
-      <Typography variant="h5">
-        Description: {oneProduct.description}
-      </Typography>
-      <img width={"300px"} src={oneProduct.image} alt="product" />
+    <div className="details-block">
+      <div className="details-content-block">
+        <h2>Title: {oneProduct.title}</h2>
+        <h2>Price: {oneProduct.price}</h2>
+        <h2>Description: {oneProduct.description}</h2>
+      </div>
+      <div className="details-img">
+        <img width={"300px"} src={oneProduct.image} alt="product" />
+      </div>
+
       {/* <Reviews reviews={oneProduct.reviews} /> */}
-    </Container>
+    </div>
   );
 };
 

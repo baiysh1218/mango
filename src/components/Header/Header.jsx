@@ -58,12 +58,12 @@ const Header = () => {
             </div>
           )}
         </div>
-        <div className="navbar-icon-content-block">
+        {/* <div className="navbar-icon-content-block">
           <IconButton>
             <FavoriteBorderIcon className="navbar-icon" />
           </IconButton>
           <p className="navbar-icon-p">избранные</p>
-        </div>
+        </div> */}
       </div>
       {/* </div> */}
     </div>

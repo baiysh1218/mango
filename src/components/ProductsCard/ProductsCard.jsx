@@ -21,6 +21,7 @@ const ProductsCard = ({ item }) => {
   const navigate = useNavigate();
   const [productCart, setProductCart] = useState(checkProductInCart(item.id));
   const [rating, setRating] = useState(0);
+  // console.log(item.author);
   return (
     <div className="card-block">
       <div className="card-content-block">
@@ -32,9 +33,6 @@ const ProductsCard = ({ item }) => {
             <div className="card-title">
               <p>{item.title}</p>
               <p>{item.price}</p>
-              Likes: {item.like} <br />
-              rating: {item.rating}
-
             </div>
             <div className="card-icon-block">
               <IconButton
@@ -57,13 +55,18 @@ const ProductsCard = ({ item }) => {
                 </button> */}
 
               <div>
-                <IconButton onClick={() => deleteProduct(item.id)}>
-                  <DeleteIcon />
-                </IconButton>
-                {/* <button onClick={() => deleteProduct(item.id)}>delete</button> */}
-                <IconButton onClick={() => navigate(`/edit/${item.id}`)}>
-                  <EditIcon />
-                </IconButton>
+                {item.author ? (
+                  <div>
+                    <IconButton onClick={() => deleteProduct(item.id)}>
+                      <DeleteIcon />
+                    </IconButton>
+                    {/* <button onClick={() => deleteProduct(item.id)}>delete</button> */}
+                    <IconButton onClick={() => navigate(`/edit/${item.id}`)}>
+                      <EditIcon />
+                    </IconButton>
+                  </div>
+                ) : null}
+
                 {/* <button onClick={() => navigate(`/edit/${item.id}`)}>
                   edit
                 </button> */}

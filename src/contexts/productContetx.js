@@ -48,7 +48,7 @@ const ProductsContextProvider = ({ children }) => {
         `${API}/products/${window.location.search}`,
         config
       );
-      console.log(res);
+      // console.log(res.data.result.author);
       dispatch({
         type: "GET_PRODUCTS",
         payload: res.data.results,
