@@ -211,12 +211,10 @@
   .main__content_4 h1,
   .main__content_5 h1,
   .main__content_6 h1 {
-    
     margin-left: 20px;
     font-size: 25px;
     margin-bottom: 50px;
     /* -webkit-text-stroke-width: 0.01px; */
     -webkit-text-stroke-color: #b9b4b4;
-    
   }
 }

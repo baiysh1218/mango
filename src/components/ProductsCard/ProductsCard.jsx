@@ -1,6 +1,9 @@
 import React, { useContext, useEffect, useState } from "react";
 import "../ProductsCard/ProductCard.css";
 import AddShoppingCartOutlinedIcon from "@mui/icons-material/AddShoppingCartOutlined";
+import InfoIcon from "@mui/icons-material/Info";
+import DeleteIcon from "@mui/icons-material/Delete";
+import EditIcon from "@mui/icons-material/Edit";
 import { IconButton } from "@mui/material";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import { cartContext } from "../../contexts/cardContext";
@@ -10,12 +13,11 @@ import { useNavigate } from "react-router-dom";
 import { productsContext } from "../../contexts/productContetx";
 
 const ProductsCard = ({ item }) => {
-  console.log(item);
+  // console.log(item.image);
   const { addToCart, checkProductInCart } = useContext(cartContext);
-  const { deleteProduct, toggleLike, addLike } = useContext(productsContext);
+  const { deleteProduct, toggleLike } = useContext(productsContext);
   const navigate = useNavigate();
   const [productCart, setProductCart] = useState(checkProductInCart(item.id));
-
 
   return (
     <div className="card-block">
@@ -43,22 +45,31 @@ const ProductsCard = ({ item }) => {
                   <ShoppingCartOutlinedIcon />
                 )}
               </IconButton>
+              <IconButton onClick={() => navigate(`/details/${item.id}`)}>
+                <InfoIcon />
+              </IconButton>
+              {/* <button onClick={() => navigate(`/details/${item.id}`)}>
+                  Details
+                </button> */}
 
-              <button onClick={() => navigate(`/details/${item.id}`)}>
-                Details
-              </button>
               <div>
-                <button onClick={() => deleteProduct(item.id)}>delete</button>
-                <button onClick={() => navigate(`/edit/${item.id}`)}>
+                <IconButton onClick={() => deleteProduct(item.id)}>
+                  <DeleteIcon />
+                </IconButton>
+                {/* <button onClick={() => deleteProduct(item.id)}>delete</button> */}
+                <IconButton onClick={() => navigate(`/edit/${item.id}`)}>
+                  <EditIcon />
+                </IconButton>
+                {/* <button onClick={() => navigate(`/edit/${item.id}`)}>
                   edit
-                </button>
+                </button> */}
               </div>
 
-              <IconButton onClick={() => addLike(item.id)}>
+              <IconButton onClick={() => toggleLike(item.id)}>
                 {item.like}
 
                 <FavoriteIcon
-                  color={item.like === 0 ? "black" : "error"}
+                  color={item.like ? "error" : "black"}
                   // color="error"
                 />
               </IconButton>

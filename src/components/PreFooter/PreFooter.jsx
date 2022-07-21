@@ -17,21 +17,24 @@ const PreFooter = () => {
             src="https://staticpages.mngbcn.com/mangogirls/images/330/mango_1_1.jpg?imwidth=378&imdensity=2"
             alt=""
             width="360px"
-          />{" "}
+
+          />
           <img
             onClick={() => navigate("/about-us")}
             className="img-girls"
             src="https://staticpages.mngbcn.com/mangogirls/images/329/20220407_141911-01.jpeg?imwidth=378&imdensity=2"
             alt=""
             width="360px"
-          />{" "}
+
+          />
+
           <img
             onClick={() => navigate("/about-us")}
             className="img-girls"
             src="https://staticpages.mngbcn.com/mangogirls/images/328/1_fave.jpg?imwidth=378&imdensity=2"
             alt=""
             width="360px"
-          />{" "}
+          />
           <img
             onClick={() => navigate("/about-us")}
             className="img-girls"
@@ -41,7 +44,6 @@ const PreFooter = () => {
           />
         </div>
       </div>
-    // </div>
   );
 };
 

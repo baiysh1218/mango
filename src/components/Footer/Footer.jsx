@@ -12,18 +12,15 @@ const Footer = () => {
   const navigate = useNavigate();
   return (
     <div>
-      <div className="footer-intro-title-block">
-        <div className="footer-intro-title">
-          <h1 className="footer-intro-h1">Женское</h1>
-        </div>
-        <div className="footer-intro-main-block"></div>
-      </div>
+      <div className="footer-intro-title-block"></div>
       <div className="footer-section-block">
         <div className="footer-section-content">
           <h4 onClick={() => navigate("/register")} className="footer-intro-h4">
             Pегистрация
           </h4>
-          <h4 className="footer-intro-h4">Контактная информация</h4>
+          <h4 onClick={() => navigate("/contact")} className="footer-intro-h4">
+            Контактная информация
+          </h4>
           <h4
             onClick={() => navigate("/magazines")}
             className="footer-intro-h4"

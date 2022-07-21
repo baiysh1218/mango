@@ -6,7 +6,7 @@ const MainFooter = () => {
     // <div className="container">
       <div className="footer-intro-content">
         <div className="footer-content">
-          <h3 className="footer-intro-h3">Одежда</h3>
+          <h3 className="footer-intro-h3">Коллекции</h3>
         </div>
         <div>
           <p className="footer-content-p">Accessories Edition</p>
