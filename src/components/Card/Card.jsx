@@ -27,7 +27,7 @@ export default function Cart() {
   }, []);
   console.log(cart);
   return cart ? (
-    <div className="container">
+    // <div className="container">
       <div className="buscet-block">
         <TableContainer component={Paper}>
           <Table
@@ -92,7 +92,7 @@ export default function Cart() {
           </button>
         </Box>
       </div>
-    </div>
+    // </div>
   ) : (
     <Loader />
   );

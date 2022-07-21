@@ -3,7 +3,8 @@ import "../AboutUs/AboutUs.css";
 
 const AboutUs = () => {
   return (
-    // <div>
+
+    // <div className="container">    
     <div className="main">
       <div className="about-text">
         <h2 className="about-us">СООБЩЕСТВО MANGO</h2>
