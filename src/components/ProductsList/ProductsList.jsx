@@ -11,7 +11,7 @@ import "../ProductsList/ProductList.css";
 
 const ProductsList = () => {
   const { products, getProducts, pages } = useContext(productsContext);
-  // console.log(res);
+  console.log(pages);
   const [searchParams, setSearchParams] = useSearchParams();
 
   // const [currentPage, setCurrrentPage] = useState(1);
@@ -29,6 +29,14 @@ const ProductsList = () => {
   );
 
   useEffect(() => {
+    getProducts();
+  }, []);
+
+  useEffect(() => {
+    getProducts();
+  }, [searchParams]);
+
+  useEffect(() => {
     setSearchParams({
       q: search,
       _page: currentPage,
@@ -38,16 +46,13 @@ const ProductsList = () => {
     });
   }, [search, currentPage, price]);
 
-  useEffect(() => {
-    getProducts();
-  }, [searchParams]);
-
   return (
     // <div className="container">
     <div className="product-list-block">
       <div className="products-filter-price">
         <input
           className="all-product-input0-search"
+          value={search}
           onChange={e => setSearch(e.target.value)}
           placeholder="search"
         />
