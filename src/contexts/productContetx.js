@@ -42,7 +42,7 @@ const ProductsContextProvider = ({ children }) => {
         `${API}/products/${window.location.search}`,
         config
       );
-      // console.log(res);
+      console.log(res);
       dispatch({
         type: "GET_PRODUCTS",
         payload: res.data.results,
@@ -63,7 +63,7 @@ const ProductsContextProvider = ({ children }) => {
         headers: { Authorization },
       };
       const res = await axios(`${API}/category/`, config);
-      // console.log(res);
+      console.log(res);
       dispatch({
         type: "GET_CATEGORIES",
         payload: res.data.results,
@@ -84,7 +84,7 @@ const ProductsContextProvider = ({ children }) => {
       const res = await axios.post(`${API}/products/`, newProduct, config);
       navigate("/products-list");
       getProducts();
-      console.log(res);
+      // console.log(res);
     } catch (err) {
       // console.log(err.response.data.detail);
       console.log(err);
@@ -116,6 +116,7 @@ const ProductsContextProvider = ({ children }) => {
       };
       const res = await axios(`${API}/products/${id}/`, config);
       // console.log(res);
+      // console.log(res.data.like);
       dispatch({
         type: "GET_ONE_PRODUCT",
         payload: res.data,
@@ -145,16 +146,6 @@ const ProductsContextProvider = ({ children }) => {
     }
   }
 
-  // async function createLike() {
-  //   try {
-  //     const res = await axios.post(`${API}/likes/`);
-  //     getProducts();
-  //     console.log(res);
-  //   } catch (err) {
-  //     console.log(err);
-  //   }
-  // }
-
   async function toggleLike(id) {
     try {
       const tokens = JSON.parse(localStorage.getItem("tokens"));
@@ -165,7 +156,23 @@ const ProductsContextProvider = ({ children }) => {
       };
       const res = await axios(`${API}/likes/${id}/`, config);
       getProducts();
-      console.log(res.data.results);
+      console.log(res);
+    } catch (err) {
+      console.log(err);
+    }
+  }
+
+  async function addLike(id) {
+    try {
+      const tokens = JSON.parse(localStorage.getItem("tokens"));
+      //! config
+      const Authorization = `Bearer ${tokens.access}`;
+      const config = {
+        headers: { Authorization },
+      };
+      const res = await axios.post(`${API}/likes/`);
+      // getProducts();
+      console.log(res);
     } catch (err) {
       console.log(err);
     }
@@ -184,7 +191,7 @@ const ProductsContextProvider = ({ children }) => {
         getOneProduct,
         updateProduct,
         toggleLike,
-        // createLike,
+        addLike,
       }}>
       {children}
     </productsContext.Provider>

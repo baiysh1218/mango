@@ -3,13 +3,14 @@ import { useEffect } from "react";
 import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { productsContext } from "../../contexts/productContetx";
+import DetailsProduct from "../DetailsProduct/DetailsProduct";
 import ProductsCard from "../ProductsCard/ProductsCard";
 
 import "../ProductsList/ProductList.css";
 
 const ProductsList = () => {
   const { products, getProducts } = useContext(productsContext);
-  console.log(products);
+  // console.log(products);
   const navigate = useNavigate();
   useEffect(() => {
     getProducts();
