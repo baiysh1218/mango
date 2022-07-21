@@ -31,6 +31,7 @@ const ProductsList = () => {
   useEffect(() => {
     setSearchParams({
       q: search,
+
       // limit: 10,
       page: currentPage,
       price_from: price[0],
