@@ -31,7 +31,7 @@ const Login = () => {
 
   return (
 
-    <div className="container">
+    // <div className="container">
       <div className="login-block-style">
         <div display={"flex"} flexDirection={"column"} marginTop={"50px"}>
           <Typography variant="h3" className="type-login">
@@ -58,7 +58,7 @@ const Login = () => {
           </div>
         </div>
       </div>
-    </div>
+    // </div>
 
   );
 };

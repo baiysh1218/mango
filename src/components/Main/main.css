@@ -1,13 +1,20 @@
 .main__content {
   width: 100%;
   display: flex;
+  justify-content: center;
+  align-items: center;
   /* flex-wrap: wrap; */
+}
+
+.main-content-block{
+  width: 100%;
 }
 
 .main__content_first,
 .main__content_second {
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-direction: row;
   /* flex-wrap: wrap; */
   width: 100%;

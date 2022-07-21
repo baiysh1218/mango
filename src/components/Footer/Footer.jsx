@@ -20,16 +20,14 @@ const Footer = () => {
       </div>
       <div className="footer-section-block">
         <div className="footer-section-content">
-
-          <h4
-            onClick={() => navigate("/register")}
-            className="footer-intro-h4">
+          <h4 onClick={() => navigate("/register")} className="footer-intro-h4">
             Pегистрация
           </h4>
           <h4 className="footer-intro-h4">Контактная информация</h4>
           <h4
             onClick={() => navigate("/magazines")}
-            className="footer-intro-h4">
+            className="footer-intro-h4"
+          >
             Магазины
           </h4>
           <h4 onClick={() => navigate("/company")} className="footer-intro-h4">

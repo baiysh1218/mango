@@ -16,8 +16,10 @@ const App = () => {
         <ProductsContextProvider>
           <BrowserRouter>
             <Header />
+            <div className="container">
             <div className="invicible"></div>
             <Routing />
+            </div>
             <Footer />
           </BrowserRouter>
         </ProductsContextProvider>
