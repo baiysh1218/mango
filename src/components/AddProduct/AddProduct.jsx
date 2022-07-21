@@ -5,7 +5,9 @@ import {
   InputLabel,
   MenuItem,
   Select,
+  TextField,
   Typography,
+  useRadioGroup,
 } from "@mui/material";
 
 import React, { useEffect } from "react";
@@ -17,7 +19,7 @@ import "../AddProduct/AddProduct.css";
 import { useNavigate } from "react-router-dom";
 
 const AddProduct = () => {
-  const { createProduct, categories, getCategories } =
+  const { createProduct, categories, getCategories, products } =
     useContext(productsContext);
   const navigate = useNavigate();
   const [title, setTitle] = useState("");
@@ -25,6 +27,7 @@ const AddProduct = () => {
   const [price, setPrice] = useState(0);
   const [category, setCategory] = useState("");
   const [image, setImage] = useState(null);
+
   // const [image2, setImage2] = useState(null);
   // const [image3, setImage3] = useState(null);
   // const [image4, setImage4] = useState(null);
@@ -32,7 +35,7 @@ const AddProduct = () => {
   useEffect(() => {
     getCategories();
   }, []);
-  console.log(categories);
+  // console.log(products);
 
   function handleSave() {
     let newProduct = new FormData();
@@ -41,6 +44,7 @@ const AddProduct = () => {
     newProduct.append("price", price);
     newProduct.append("category", category);
     newProduct.append("image", image);
+
     createProduct(newProduct, navigate);
   }
   return (
@@ -68,6 +72,7 @@ const AddProduct = () => {
           type={"number"}
           placeholder={"price"}
         />
+
         <p className="cotegory-content">Category</p>
 
         <FormControl fullWidth className="add-content">
