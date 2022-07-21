@@ -16,6 +16,8 @@ const ProductsCard = ({ item }) => {
   const navigate = useNavigate();
   const [productCart, setProductCart] = useState(checkProductInCart(item.id));
 
+  console.log(item);
+
   // console.log(item.like);
   //! like
   // const [author, setAuthor] = useState("");
@@ -60,7 +62,7 @@ const ProductsCard = ({ item }) => {
             </div>
           </div>
 
-          {item.admin ? (
+          {item.user ? (
             <div>
               <button onClick={() => deleteProduct(item.id)}>delete</button>
               <button onClick={() => navigate(`/edit/${item.id}`)}>edit</button>
