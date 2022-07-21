@@ -13,6 +13,9 @@ const AboutUs = () => {
           хэштег #mangocommunity
         </p>
       </div>
+<<<<<<< HEAD
+      <div className="img-about">
+=======
       {/* <div className="img-about"> */}
       <img
         className="img-a"
@@ -52,6 +55,7 @@ const AboutUs = () => {
       />
 
       <div className="big-img">
+>>>>>>> 9c22075457180f2cb9fc29d6854030951f09a326
         <img
           src="https://staticpages.mngbcn.com/mangogirls/images/322/jan22mangoxlj-16.jpg?&imwidth=756&imdensity=2"
           alt=""
@@ -111,6 +115,30 @@ const AboutUs = () => {
           />
         </div>
       </div>
+<<<<<<< HEAD
+
+      {/* big img 2 start */}
+      <div className="big-img">
+        <img
+          src="https://staticpages.mngbcn.com/mangogirls/images/306/img_2629.jpeg?&imwidth=756&imdensity=2"
+          alt=""
+          width="66.6%"
+        />
+        <div className="side-img">
+          <img
+            src="https://staticpages.mngbcn.com/mangogirls/images/308/image00001.jpeg?&imwidth=756&imdensity=2"
+            width="100%"
+            alt=""
+          />
+          <img
+            src="https://staticpages.mngbcn.com/mangogirls/images/299/mangoyyc-4.jpg?&imwidth=756&imdensity=2"
+            width="100%"
+            alt=""
+          />
+        </div>
+      </div>
+=======
+>>>>>>> 9c22075457180f2cb9fc29d6854030951f09a326
       {/* <div className="img"> */}
       <img
         src="https://staticpages.mngbcn.com/mangogirls/images/256/image2.jpeg?&imwidth=756&imdensity=2"
@@ -135,12 +163,21 @@ const AboutUs = () => {
           width="66.6%"
         />
         <div className="side-img">
+<<<<<<< HEAD
           <img
             src="https://staticpages.mngbcn.com/mangogirls/images/168/img_3577.jpeg?&imwidth=756&imdensity=2"
             width="100%"
             alt=""
           />
           <img
+=======
+          <img
+            src="https://staticpages.mngbcn.com/mangogirls/images/168/img_3577.jpeg?&imwidth=756&imdensity=2"
+            width="100%"
+            alt=""
+          />
+          <img
+>>>>>>> 9c22075457180f2cb9fc29d6854030951f09a326
             src="https://staticpages.mngbcn.com/mangogirls/images/178/2_2.jpeg?&imwidth=756&imdensity=2"
             width="100%"
             alt=""
