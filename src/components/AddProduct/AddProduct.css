@@ -1,80 +1,48 @@
-.invicible {
-  width: 100%;
-  height: 80px;
-  /* background-color: aqua; */
-}
-
-.add-product-inp {
-  margin-top: 20px;
-  /* padding: 10px; */
-  border: 0;
-  box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
-  /* width: 70%; */
-}
 .add-product-content-block {
-  background-color: rgba(49, 103, 219, 0.466);
-  width: 50%;
-  /* display: flex; */
-  flex-direction: column;
-  justify-content: center;
-  /* height: 0%; */
-  margin-top: 3%;
-  border-radius: 20px;
-  align-items: center;
-  border: 1px solid black;
-}
-.add-content {
   display: flex;
+  justify-content: center;
   flex-direction: column;
-  justify-content: center;
+  width: 100%;
   align-items: center;
-  /* margin-right: 55%; */
-}
-.add-cotegory {
-  display: flex;
-  /* width: 50%; */
-  margin-top: 10px;
-  justify-content: center;
-  margin-left: -50%;
-  margin-right: 50%;
-}
-#demo-simple-select-label {
-  border: 1px solid red;
-}
-.cotegory-content {
-  font-size: 20px;
-  margin-top: 20px;
 }
 .add-product-block {
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
+  justify-content: center;
+  width: 100%;
   align-items: center;
-  width: 70%;
-  padding: 10% 0;
+}
+.add-block-inp {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+}
+.add-product-btn-block {
+  display: flex;
+  justify-content: center;
+  width: 20%;
 }
 .add-peoduct-btn {
-  padding: 4%;
+  width: 100%;
+}
+.form-control-add {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+}
+.add-peoduct-btn {
   border: none;
-  background-color: darkturquoise;
-  width: 50%;
-  margin-top: 20px;
-  transition: 0.3s;
-  box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
+  background-color: cornflowerblue;
+  padding: 5% 0;
+  box-shadow: 0 0 15px 4px rgba(63, 63, 63, 0.218);
 }
 .add-peoduct-btn:hover {
-  border-radius: 20px;
+  border-radius: 10px;
   transition: 0.5s;
-}
-
-.add-product-block {
-  margin-left: 25%;
-  display: flex;
-  justify-content: center;
-}
-.inp-img {
-  display: flex;
-  justify-content: center;
-  /* margin-left: 10%; */
-  /* margin-right: 50%; */
+  background-color: rgb(65, 102, 172);
+  color: white;
+  box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.438);
 }

@@ -43,7 +43,7 @@ const Header = () => {
         </div>
         <div className="navbar-icon-content-block">
           {currentUser ? (
-            <div>
+            <div className="heafer-icon">
               <IconButton onClick={() => handleLogout(navigate)}>
                 <PermIdentityIcon className="navbar-icon" />
               </IconButton>
