@@ -3,7 +3,7 @@ import "../MainFooter/MainFooter.css";
 
 const MainFooter = () => {
   return (
-    <div className="container">
+    // <div className="container">
       <div className="footer-intro-content">
         <div className="footer-content">
           <h3 className="footer-intro-h3">Коллекции</h3>
@@ -17,7 +17,7 @@ const MainFooter = () => {
           <p className="footer-content-p">Обувь</p>
         </div>
       </div>
-    </div>
+    // </div>
   );
 };
 

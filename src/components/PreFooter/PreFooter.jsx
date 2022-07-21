@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 const PreFooter = () => {
   const navigate = useNavigate();
   return (
-    <div className="container">
+    // <div className="container">
       <div className="footer-main-block">
         <div className="prefooter-logo">
           <h2>#MANGOGIRLS</h2>
@@ -17,6 +17,7 @@ const PreFooter = () => {
             src="https://staticpages.mngbcn.com/mangogirls/images/330/mango_1_1.jpg?imwidth=378&imdensity=2"
             alt=""
             width="360px"
+
           />
           <img
             onClick={() => navigate("/about-us")}
@@ -24,7 +25,9 @@ const PreFooter = () => {
             src="https://staticpages.mngbcn.com/mangogirls/images/329/20220407_141911-01.jpeg?imwidth=378&imdensity=2"
             alt=""
             width="360px"
+
           />
+
           <img
             onClick={() => navigate("/about-us")}
             className="img-girls"
@@ -41,7 +44,6 @@ const PreFooter = () => {
           />
         </div>
       </div>
-    </div>
   );
 };
 

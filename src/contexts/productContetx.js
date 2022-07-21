@@ -5,6 +5,7 @@ export const productsContext = React.createContext();
 
 const INIT_STATE = {
   products: [],
+  pages: 0,
   categories: [],
   oneProduct: null,
 };
@@ -12,7 +13,11 @@ const INIT_STATE = {
 function reducer(state = INIT_STATE, action) {
   switch (action.type) {
     case "GET_PRODUCTS":
-      return { ...state, products: action.payload };
+      return {
+        ...state,
+        products: action.payload,
+        // pages: Math.ceil(action.payload.count / 5),
+      };
     case "GET_CATEGORIES":
       return { ...state, categories: action.payload };
     case "GET_ONE_PRODUCT":
@@ -42,7 +47,7 @@ const ProductsContextProvider = ({ children }) => {
         `${API}/products/${window.location.search}`,
         config
       );
-      // console.log(res.data);
+      console.log(res);
       dispatch({
         type: "GET_PRODUCTS",
         payload: res.data.results,
@@ -63,7 +68,7 @@ const ProductsContextProvider = ({ children }) => {
         headers: { Authorization },
       };
       const res = await axios(`${API}/category/`, config);
-      // console.log(res);
+      console.log(res);
       dispatch({
         type: "GET_CATEGORIES",
         payload: res.data.results,
@@ -116,6 +121,7 @@ const ProductsContextProvider = ({ children }) => {
       };
       const res = await axios(`${API}/products/${id}/`, config);
       // console.log(res);
+      // console.log(res.data.like);
       dispatch({
         type: "GET_ONE_PRODUCT",
         payload: res.data,
@@ -145,18 +151,36 @@ const ProductsContextProvider = ({ children }) => {
     }
   }
 
+  async function toggleLike(id) {
+    try {
+      const tokens = JSON.parse(localStorage.getItem("tokens"));
+      //! config
+      const Authorization = `Bearer ${tokens.access}`;
+      const config = {
+        headers: { Authorization },
+      };
+      const res = await axios(`${API}/products/${id}/like/`, config);
+      getProducts();
+      console.log(res);
+    } catch (err) {
+      console.log(err);
+    }
+  }
+
   return (
     <productsContext.Provider
       value={{
         products: state.products,
         categories: state.categories,
         oneProduct: state.oneProduct,
+        pages: state.pages,
         createProduct,
         getCategories,
         getProducts,
         deleteProduct,
         getOneProduct,
         updateProduct,
+        toggleLike,
       }}>
       {children}
     </productsContext.Provider>

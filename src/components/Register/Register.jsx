@@ -34,7 +34,7 @@ const Register = () => {
   }
 
   return (
-    <div className="container">
+    // <div className="container">
       <div className="regiseter-block">
         <div className="register-teg">
           <h5 className="rgister-tag">Register</h5>
@@ -92,7 +92,7 @@ const Register = () => {
           </div>
         </div>
       </div>
-    </div>
+    // </div>
   );
 };
 

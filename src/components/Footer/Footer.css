@@ -20,7 +20,7 @@
 }
 .footer-section-content {
   justify-content: center;
-  width: 35%;
+  width: 50%;
   height: 100%;
   display: flex;
   flex-direction: row;
@@ -38,13 +38,14 @@
   margin: 0 5%;
 }
 .footer-content-p {
-  margin: 5% 0;
+  margin: 1% 0;
 }
 .footer-intro-h1 {
   font-size: 30px;
 }
-.footer-intro-content-h4 {
+.footer-intro-h4 {
   font-size: 16px;
+  margin: 0 20px;
 }
 .footer-intro-title-block {
   margin-top: 15%;
@@ -73,7 +74,7 @@
     font-size: 10px;
   }
   .footer-intro-h4 {
-    margin: 20%;
+   
     font-size: 10px;
     display: flex;
     flex-direction: column;

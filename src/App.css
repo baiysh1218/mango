@@ -1,11 +1,15 @@
 * {
-  margin: 0 auto;
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "MangoSans";
 }
 .container {
-  width: 1583px;
+  
+   padding: 0 60px;
+   margin: 0 auto;
+   /* min-height: 75vh; */
+   /* min-width: 370px; */
 }
 .invicible {
   width: 100%;

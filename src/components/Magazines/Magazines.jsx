@@ -3,7 +3,7 @@ import "../Magazines/Magazines.css";
 
 const Magazines = () => {
   return (
-    <div className="container">
+    // <div className="container">
       <div className="child-cont">
         <div>
           <h2 className="our-magazines">Наши магазины</h2>
@@ -39,7 +39,7 @@ const Magazines = () => {
           </div>
         </div>
       </div>
-    </div>
+    // </div>
   );
 };
 

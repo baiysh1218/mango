@@ -23,7 +23,8 @@ const Footer = () => {
           </h4>
           <h4
             onClick={() => navigate("/magazines")}
-            className="footer-intro-h4">
+            className="footer-intro-h4"
+          >
             Магазины
           </h4>
           <h4 onClick={() => navigate("/company")} className="footer-intro-h4">

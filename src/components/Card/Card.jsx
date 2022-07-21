@@ -27,73 +27,73 @@ export default function Cart() {
   }, []);
   console.log(cart);
   return cart ? (
-    <div className="container">
-      <div className="buscet-block">
-        <TableContainer component={Paper}>
-          <Table
-            sx={{ minWidth: 650 }}
-            aria-label="simple table"
-            className="table-buscet">
-            <TableHead>
-              <TableRow>
-                <TableCell>Product</TableCell>
-                <TableCell align="right">Price</TableCell>
-                <TableCell align="right">Count</TableCell>
-                <TableCell align="right">Subprice</TableCell>
-                <TableCell align="right">Info</TableCell>
+    // <div className="container">
+    <div className="buscet-block">
+      <TableContainer component={Paper}>
+        <Table
+          sx={{ minWidth: 650 }}
+          aria-label="simple table"
+          className="table-buscet">
+          <TableHead>
+            <TableRow>
+              <TableCell>Product</TableCell>
+              <TableCell align="right">Price</TableCell>
+              <TableCell align="right">Count</TableCell>
+              <TableCell align="right">Subprice</TableCell>
+              <TableCell align="right">Info</TableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            {cart.products.map(row => (
+              <TableRow
+                className="cart-table-row"
+                key={row.item.id}
+                sx={{ "&:last-child td, &:last-child th": { border: 0 } }}>
+                <TableCell component="th" scope="row">
+                  {row.item.title}
+                </TableCell>
+                <TableCell align="right">{row.item.price}$</TableCell>
+
+                <TableCell align="right">
+                  <IconButton
+                    onClick={() => changeCount(row.count - 1, row.item.id)}>
+                    <RemoveIcon />
+                  </IconButton>
+                  {row.count}
+                  <IconButton
+                    onClick={() => changeCount(row.count + 1, row.item.id)}>
+                    <AddIcon />
+                  </IconButton>
+                </TableCell>
+                <TableCell align="right">{row.subPrice}</TableCell>
+                <TableCell align="right">
+                  <IconButton onClick={() => deleteFromCart(row.item.id)}>
+                    <DeleteIcon />
+                  </IconButton>
+
+                  <IconButton
+                    onClick={() => navigate(`/details/${row.item.id}`)}>
+                    <InfoIcon />
+                  </IconButton>
+                </TableCell>
               </TableRow>
-            </TableHead>
-            <TableBody>
-              {cart.products.map(row => (
-                <TableRow
-                  className="cart-table-row"
-                  key={row.item.id}
-                  sx={{ "&:last-child td, &:last-child th": { border: 0 } }}>
-                  <TableCell component="th" scope="row">
-                    {row.item.title}
-                  </TableCell>
-                  <TableCell align="right">{row.item.price}$</TableCell>
-
-                  <TableCell align="right">
-                    <IconButton
-                      onClick={() => changeCount(row.count - 1, row.item.id)}>
-                      <RemoveIcon />
-                    </IconButton>
-                    {row.count}
-                    <IconButton
-                      onClick={() => changeCount(row.count + 1, row.item.id)}>
-                      <AddIcon />
-                    </IconButton>
-                  </TableCell>
-                  <TableCell align="right">{row.subPrice}</TableCell>
-                  <TableCell align="right">
-                    <IconButton onClick={() => deleteFromCart(row.item.id)}>
-                      <DeleteIcon />
-                    </IconButton>
-
-                    <IconButton
-                      onClick={() => navigate(`/details/${row.item.id}`)}>
-                      <InfoIcon />
-                    </IconButton>
-                  </TableCell>
-                </TableRow>
-              ))}
-            </TableBody>
-          </Table>
-        </TableContainer>
-        <Box>
-          <Typography className="total-price" variant="h4">
-            Total price: {cart.totalPrice} $
-          </Typography>
-          <button
-            onClick={() => navigate("/credit-card")}
-            className="btn-admin btn-by">
-            by now
-          </button>
-        </Box>
-      </div>
+            ))}
+          </TableBody>
+        </Table>
+      </TableContainer>
+      <Box>
+        <Typography className="total-price" variant="h4">
+          Total price: {cart.totalPrice} kgs
+        </Typography>
+        <button
+          onClick={() => navigate("/credit-card")}
+          className="btn-admin btn-by">
+          by now
+        </button>
+      </Box>
     </div>
   ) : (
+    // </div>
     <Loader />
   );
 }

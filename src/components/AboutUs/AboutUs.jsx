@@ -3,17 +3,18 @@ import "../AboutUs/AboutUs.css";
 
 const AboutUs = () => {
   return (
-    <div className="container">
-      <div className="main">
-        <div className="about-text">
-          <h2 className="about-us">СООБЩЕСТВО MANGO</h2>
-          <p className="about-p">
-            Нам очень хочется посмотреть, как вы носите модели от Mango.
-            Поделитесь своим образом и упомяните нас, отметив @Mango или добавив
-            хэштег #mangocommunity
-          </p>
-        </div>
-        {/* <div className="img-about"> */}
+
+    // <div className="container">    
+    <div className="main">
+      <div className="about-text">
+        <h2 className="about-us">СООБЩЕСТВО MANGO</h2>
+        <p className="about-p">
+          Нам очень хочется посмотреть, как вы носите модели от Mango.
+          Поделитесь своим образом и упомяните нас, отметив @Mango или добавив
+          хэштег #mangocommunity
+        </p>
+      </div>
+       {/* <div className="img-about"> */}
         <img
           className="img-a"
           src="https://staticpages.mngbcn.com/mangogirls/images/333/image00019.jpeg?&imwidth=756&imdensity=2"
