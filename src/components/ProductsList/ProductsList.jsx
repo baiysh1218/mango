@@ -10,9 +10,8 @@ import ProductsCard from "../ProductsCard/ProductsCard";
 import "../ProductsList/ProductList.css";
 
 const ProductsList = () => {
-
   const { products, getProducts, pages } = useContext(productsContext);
-  console.log(pages);
+  // console.log(res);
   const [searchParams, setSearchParams] = useSearchParams();
 
   // const [currentPage, setCurrrentPage] = useState(1);
