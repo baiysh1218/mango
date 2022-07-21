@@ -5,6 +5,7 @@ export const productsContext = React.createContext();
 
 const INIT_STATE = {
   products: [],
+  pages: 0,
   categories: [],
   oneProduct: null,
 };
@@ -12,7 +13,11 @@ const INIT_STATE = {
 function reducer(state = INIT_STATE, action) {
   switch (action.type) {
     case "GET_PRODUCTS":
-      return { ...state, products: action.payload };
+      return {
+        ...state,
+        products: action.payload,
+        // pages: Math.ceil(action.payload.count / 5),
+      };
     case "GET_CATEGORIES":
       return { ...state, categories: action.payload };
     case "GET_ONE_PRODUCT":
@@ -184,6 +189,7 @@ const ProductsContextProvider = ({ children }) => {
         products: state.products,
         categories: state.categories,
         oneProduct: state.oneProduct,
+        pages: state.pages,
         createProduct,
         getCategories,
         getProducts,

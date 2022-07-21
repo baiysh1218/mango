@@ -7,11 +7,11 @@
   align-items: center;
   justify-content: center;
 }
-* {
+/* * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
+} */
 .form-card-inp-btn {
   display: flex;
   margin-top: 30px;
@@ -20,13 +20,13 @@
   box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
 }
 
-body {
+/* body {
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
   background: #0c0c0c00;
-}
+} */
 
 a {
   position: relative;
