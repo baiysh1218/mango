@@ -3,8 +3,6 @@ import "../AboutUs/AboutUs.css";
 
 const AboutUs = () => {
   return (
-
-    // <div className="container">    
     <div className="main">
       <div className="about-text">
         <h2 className="about-us">СООБЩЕСТВО MANGO</h2>
@@ -14,7 +12,8 @@ const AboutUs = () => {
           хэштег #mangocommunity
         </p>
       </div>
-       {/* <div className="img-about"> */}
+      <div className="img-about">
+        {/* <div className="img-about"> */}
         <img
           className="img-a"
           src="https://staticpages.mngbcn.com/mangogirls/images/333/image00019.jpeg?&imwidth=756&imdensity=2"
@@ -91,6 +90,27 @@ const AboutUs = () => {
           />
         </div>
         {/* </div> */}
+
+        {/* big img 2 start */}
+        <div className="big-img">
+          <img
+            src="https://staticpages.mngbcn.com/mangogirls/images/306/img_2629.jpeg?&imwidth=756&imdensity=2"
+            alt=""
+            width="66.6%"
+          />
+          <div className="side-img">
+            <img
+              src="https://staticpages.mngbcn.com/mangogirls/images/308/image00001.jpeg?&imwidth=756&imdensity=2"
+              width="100%"
+              alt=""
+            />
+            <img
+              src="https://staticpages.mngbcn.com/mangogirls/images/299/mangoyyc-4.jpg?&imwidth=756&imdensity=2"
+              width="100%"
+              alt=""
+            />
+          </div>
+        </div>
 
         {/* big img 2 start */}
         <div className="big-img">
