@@ -4,11 +4,13 @@ import { useEffect } from "react";
 import { useContext } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import { productsContext } from "../../contexts/productContetx";
+import DetailsProduct from "../DetailsProduct/DetailsProduct";
 import ProductsCard from "../ProductsCard/ProductsCard";
 
 import "../ProductsList/ProductList.css";
 
 const ProductsList = () => {
+
   const { products, getProducts, pages } = useContext(productsContext);
   console.log(pages);
   const [searchParams, setSearchParams] = useSearchParams();

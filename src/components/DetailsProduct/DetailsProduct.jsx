@@ -1,6 +1,7 @@
-import { Container, Typography } from "@mui/material";
+import { Container, IconButton, Typography } from "@mui/material";
+
 import React, { useContext, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { productsContext } from "../../contexts/productContetx";
 import Loader from "../Loader/Loader";
 // import Reviews from "../Reviews/Reviews";
@@ -8,7 +9,7 @@ import Loader from "../Loader/Loader";
 const DetailsProduct = () => {
   const { id } = useParams();
   const { getOneProduct, oneProduct } = useContext(productsContext);
-
+  const navigate = useNavigate();
   useEffect(() => {
     getOneProduct(id);
   }, []);
@@ -16,7 +17,7 @@ const DetailsProduct = () => {
   if (!oneProduct) {
     return <Loader />;
   }
-  console.log(oneProduct);
+  // console.log(oneProduct);
 
   return (
     <Container>
