@@ -30,7 +30,6 @@ const ProductsCard = ({ item }) => {
             <div className="card-title">
               <p>{item.title}</p>
               <p>{item.price}</p>
-              Likes: {item.like} <br />
             </div>
             <div className="card-icon-block">
               <IconButton
