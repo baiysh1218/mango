@@ -34,6 +34,8 @@
   width: 50%;
   margin-top: 10px;
   justify-content: center;
+  /* margin-left: -50%; */
+  margin-right: 50%;
 }
 #demo-simple-select-label {
   border: 1px solid red;
@@ -60,4 +62,19 @@
 .add-peoduct-btn:hover {
   border-radius: 20px;
   transition: s;
+}
+.add-product-content-block {
+  margin-left: 35%;
+  margin-top: 4%;
+}
+.add-product-block {
+  margin-left: 25%;
+  display: flex;
+  justify-content: center;
+}
+.inp-img {
+  display: flex;
+  justify-content: center;
+  /* margin-left: 10%; */
+  margin-right: 50%;
 }

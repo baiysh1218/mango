@@ -16,7 +16,8 @@ function reducer(state = INIT_STATE, action) {
       return {
         ...state,
         products: action.payload,
-        // pages: Math.ceil(action.payload.count / 5),
+
+        pages: Math.ceil(action.payload2.count / 4),
       };
     case "GET_CATEGORIES":
       return { ...state, categories: action.payload };
@@ -47,10 +48,11 @@ const ProductsContextProvider = ({ children }) => {
         `${API}/products/${window.location.search}`,
         config
       );
-      console.log(res);
+      // console.log(res.data.result.author);
       dispatch({
         type: "GET_PRODUCTS",
         payload: res.data.results,
+        payload2: res.data,
       });
     } catch (err) {
       console.log(err);

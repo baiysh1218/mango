@@ -25,7 +25,7 @@ const ProductsList = () => {
   );
 
   const [currentPage, setCurrentPage] = useState(
-    searchParams.get("_page") ? +searchParams.get("_page") : 1
+    searchParams.get("page") ? +searchParams.get("page") : 1
   );
 
   useEffect(() => {
@@ -39,10 +39,11 @@ const ProductsList = () => {
   useEffect(() => {
     setSearchParams({
       q: search,
-      _page: currentPage,
-      _limit: 6,
-      price_gte: price[0],
-      price_lte: price[1],
+
+      // limit: 10,
+      page: currentPage,
+      price_from: price[0],
+      price_to: price[1],
     });
   }, [search, currentPage, price]);
 
@@ -50,36 +51,43 @@ const ProductsList = () => {
     // <div className="container">
     <div className="product-list-block">
       <div className="products-filter-price">
-        <input
-          className="all-product-input0-search"
-          value={search}
-          onChange={e => setSearch(e.target.value)}
-          placeholder="search"
-        />
-        <Slider
-          color="secondary"
-          className="slider-all-product"
-          getAriaLabel={() => "Temperature range"}
-          value={price}
-          onChange={(e, value) => {
-            console.log(value);
-            setPrice(value);
-          }}
-          min={1}
-          max={500}
-          step={10}
-          valueLabelDisplay="auto"
-        />
-      </div>
-      {products.map(elem => (
-        <div key={elem.id} elem={elem}>
-          {elem.user ? (
-            <button onClick={() => navigate("/add-product")}>
-              add product
-            </button>
-          ) : null}
+
+        <div className="search-block">
+          <input
+            value={search}
+            className="all-product-input0-search"
+            onChange={e => setSearch(e.target.value)}
+            placeholder="search"
+          />
         </div>
-      ))}
+        <div className="slider-block">
+          <Slider
+            color="secondary"
+            className="slider-all-product"
+            getAriaLabel={() => "Temperature range"}
+            value={price}
+            onChange={(e, value) => {
+              console.log(value);
+              setPrice(value);
+            }}
+            min={1}
+            max={500}
+            step={10}
+            valueLabelDisplay="auto"
+          />
+        </div>
+        {products.map(elem => (
+          <div className="btn-block-add" key={elem.id} elem={elem}>
+            {elem.author ? (
+              <button
+                className="add-pruct-btn-list"
+                onClick={() => navigate("/add-product")}>
+                add product
+              </button>
+            ) : null}
+          </div>
+        ))}
+      </div>
 
       {products.map(item => (
         <ProductsCard key={item.id} item={item} />
@@ -89,7 +97,7 @@ const ProductsList = () => {
           page={currentPage}
           onChange={(e, page) => setCurrentPage(page)}
           count={pages}
-          // count={10}
+          // count={2}
           variant="outlined"
           color="secondary"
         />
