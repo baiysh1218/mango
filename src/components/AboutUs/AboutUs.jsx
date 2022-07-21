@@ -13,83 +13,87 @@ const AboutUs = () => {
           хэштег #mangocommunity
         </p>
       </div>
+<<<<<<< HEAD
       <div className="img-about">
+=======
+      {/* <div className="img-about"> */}
+      <img
+        className="img-a"
+        src="https://staticpages.mngbcn.com/mangogirls/images/333/image00019.jpeg?&imwidth=756&imdensity=2"
+        alt=""
+        width="33.3%"
+      />
+      <img
+        className="img-a"
+        src="https://staticpages.mngbcn.com/mangogirls/images/332/img-4025.jpg?&imwidth=756&imdensity=2"
+        alt=""
+        width="33.3%"
+      />
+      <img
+        className="img-a"
+        src="https://staticpages.mngbcn.com/mangogirls/images/331/img_1668.jpg?&imwidth=756&imdensity=2"
+        alt=""
+        width="33.3%"
+      />
+      <img
+        className="img-a"
+        src="https://staticpages.mngbcn.com/mangogirls/images/324/img_4799.jpeg?&imwidth=756&imdensity=2"
+        alt=""
+        width="33.3%"
+      />
+      <img
+        className="img-a"
+        src="https://staticpages.mngbcn.com/mangogirls/images/326/img_0778.jpeg?&imwidth=756&imdensity=2"
+        alt=""
+        width="33.3%"
+      />
+      <img
+        className="img-a"
+        src="https://staticpages.mngbcn.com/mangogirls/images/323/mango_4_2_preview_1.jpg?&imwidth=756&imdensity=2"
+        alt=""
+        width="33.3%"
+      />
+
+      <div className="big-img">
+>>>>>>> 9c22075457180f2cb9fc29d6854030951f09a326
         <img
-          className="img-a"
-          src="https://staticpages.mngbcn.com/mangogirls/images/333/image00019.jpeg?&imwidth=756&imdensity=2"
+          src="https://staticpages.mngbcn.com/mangogirls/images/322/jan22mangoxlj-16.jpg?&imwidth=756&imdensity=2"
           alt=""
-          width="33.3%"
-        />
-        <img
-          className="img-a"
-          src="https://staticpages.mngbcn.com/mangogirls/images/332/img-4025.jpg?&imwidth=756&imdensity=2"
-          alt=""
-          width="33.3%"
-        />
-        <img
-          className="img-a"
-          src="https://staticpages.mngbcn.com/mangogirls/images/331/img_1668.jpg?&imwidth=756&imdensity=2"
-          alt=""
-          width="33.3%"
-        />
-        <img
-          className="img-a"
-          src="https://staticpages.mngbcn.com/mangogirls/images/324/img_4799.jpeg?&imwidth=756&imdensity=2"
-          alt=""
-          width="33.3%"
-        />
-        <img
-          className="img-a"
-          src="https://staticpages.mngbcn.com/mangogirls/images/326/img_0778.jpeg?&imwidth=756&imdensity=2"
-          alt=""
-          width="33.3%"
-        />
-        <img
-          className="img-a"
-          src="https://staticpages.mngbcn.com/mangogirls/images/323/mango_4_2_preview_1.jpg?&imwidth=756&imdensity=2"
-          alt=""
-          width="33.3%"
+          width="66.6%"
         />
 
-        <div className="big-img">
+        <div className="side-img">
           <img
-            src="https://staticpages.mngbcn.com/mangogirls/images/322/jan22mangoxlj-16.jpg?&imwidth=756&imdensity=2"
-            alt=""
-            width="66.6%"
-          />
-
-          <div className="side-img">
-            <img
-              src="https://staticpages.mngbcn.com/mangogirls/images/320/img_1479.jpeg?&imwidth=756&imdensity=2"
-              width="100%"
-              alt=""
-            />
-            <img
-              src="https://staticpages.mngbcn.com/mangogirls/images/319/photo-2022-01-31-16-31-08.jpg?&imwidth=756&imdensity=2"
-              width="100%"
-              alt=""
-            />
-          </div>
-        </div>
-
-        <div className="img">
-          <img
-            src="https://staticpages.mngbcn.com/mangogirls/images/316/81de9b1e-17a7-4b0c-b3f1-43f7a9ed5d23.jpeg?&imwidth=756&imdensity=2"
-            width="33.3%"
+            src="https://staticpages.mngbcn.com/mangogirls/images/320/img_1479.jpeg?&imwidth=756&imdensity=2"
+            width="100%"
             alt=""
           />
           <img
-            src="https://staticpages.mngbcn.com/mangogirls/images/315/2.jpg?&imwidth=756&imdensity=2"
+            src="https://staticpages.mngbcn.com/mangogirls/images/319/photo-2022-01-31-16-31-08.jpg?&imwidth=756&imdensity=2"
+            width="100%"
             alt=""
-            width="33.3%"
-          />
-          <img
-            src="https://staticpages.mngbcn.com/mangogirls/images/314/img_9879.jpg?&imwidth=756&imdensity=2"
-            alt=""
-            width="33.3%"
           />
         </div>
       </div>
+
+      <div className="img">
+        <img
+          src="https://staticpages.mngbcn.com/mangogirls/images/316/81de9b1e-17a7-4b0c-b3f1-43f7a9ed5d23.jpeg?&imwidth=756&imdensity=2"
+          width="33.3%"
+          alt=""
+        />
+        <img
+          src="https://staticpages.mngbcn.com/mangogirls/images/315/2.jpg?&imwidth=756&imdensity=2"
+          alt=""
+          width="33.3%"
+        />
+        <img
+          src="https://staticpages.mngbcn.com/mangogirls/images/314/img_9879.jpg?&imwidth=756&imdensity=2"
+          alt=""
+          width="33.3%"
+        />
+      </div>
+      {/* </div> */}
 
       {/* big img 2 start */}
       <div className="big-img">
@@ -111,6 +115,30 @@ const AboutUs = () => {
           />
         </div>
       </div>
+<<<<<<< HEAD
+
+      {/* big img 2 start */}
+      <div className="big-img">
+        <img
+          src="https://staticpages.mngbcn.com/mangogirls/images/306/img_2629.jpeg?&imwidth=756&imdensity=2"
+          alt=""
+          width="66.6%"
+        />
+        <div className="side-img">
+          <img
+            src="https://staticpages.mngbcn.com/mangogirls/images/308/image00001.jpeg?&imwidth=756&imdensity=2"
+            width="100%"
+            alt=""
+          />
+          <img
+            src="https://staticpages.mngbcn.com/mangogirls/images/299/mangoyyc-4.jpg?&imwidth=756&imdensity=2"
+            width="100%"
+            alt=""
+          />
+        </div>
+      </div>
+=======
+>>>>>>> 9c22075457180f2cb9fc29d6854030951f09a326
       {/* <div className="img"> */}
       <img
         src="https://staticpages.mngbcn.com/mangogirls/images/256/image2.jpeg?&imwidth=756&imdensity=2"
@@ -135,12 +163,21 @@ const AboutUs = () => {
           width="66.6%"
         />
         <div className="side-img">
+<<<<<<< HEAD
           <img
             src="https://staticpages.mngbcn.com/mangogirls/images/168/img_3577.jpeg?&imwidth=756&imdensity=2"
             width="100%"
             alt=""
           />
           <img
+=======
+          <img
+            src="https://staticpages.mngbcn.com/mangogirls/images/168/img_3577.jpeg?&imwidth=756&imdensity=2"
+            width="100%"
+            alt=""
+          />
+          <img
+>>>>>>> 9c22075457180f2cb9fc29d6854030951f09a326
             src="https://staticpages.mngbcn.com/mangogirls/images/178/2_2.jpeg?&imwidth=756&imdensity=2"
             width="100%"
             alt=""
