@@ -15,11 +15,17 @@
   flex-direction: column;
   margin-bottom: 5%;
 }
-.card-section-block {
+/* .card-section-block {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-}
+} */
 .card-block {
   margin-top: 50%;
+}
+
+.card-content-block {
+  width: "300px";
+  height: "300px";
+  border: 2px solid black;
 }

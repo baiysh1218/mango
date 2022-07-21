@@ -159,24 +159,8 @@ const ProductsContextProvider = ({ children }) => {
       const config = {
         headers: { Authorization },
       };
-      const res = await axios(`${API}/likes/${id}/`, config);
+      const res = await axios(`${API}/products/${id}/like/`, config);
       getProducts();
-      console.log(res);
-    } catch (err) {
-      console.log(err);
-    }
-  }
-
-  async function addLike(id) {
-    try {
-      const tokens = JSON.parse(localStorage.getItem("tokens"));
-      //! config
-      const Authorization = `Bearer ${tokens.access}`;
-      const config = {
-        headers: { Authorization },
-      };
-      const res = await axios.post(`${API}/likes/`);
-      // getProducts();
       console.log(res);
     } catch (err) {
       console.log(err);
@@ -197,7 +181,6 @@ const ProductsContextProvider = ({ children }) => {
         getOneProduct,
         updateProduct,
         toggleLike,
-        addLike,
       }}>
       {children}
     </productsContext.Provider>
