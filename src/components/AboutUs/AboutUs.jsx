@@ -3,8 +3,7 @@ import "../AboutUs/AboutUs.css";
 
 const AboutUs = () => {
   return (
-
-    // <div className="container">    
+    // <div className="container">
     <div className="main">
       <div className="about-text">
         <h2 className="about-us">СООБЩЕСТВО MANGO</h2>
@@ -14,7 +13,7 @@ const AboutUs = () => {
           хэштег #mangocommunity
         </p>
       </div>
-       {/* <div className="img-about"> */}
+      <div className="img-about">
         <img
           className="img-a"
           src="https://staticpages.mngbcn.com/mangogirls/images/333/image00019.jpeg?&imwidth=756&imdensity=2"
@@ -90,66 +89,66 @@ const AboutUs = () => {
             width="33.3%"
           />
         </div>
-        {/* </div> */}
+      </div>
 
-        {/* big img 2 start */}
-        <div className="big-img">
+      {/* big img 2 start */}
+      <div className="big-img">
+        <img
+          src="https://staticpages.mngbcn.com/mangogirls/images/306/img_2629.jpeg?&imwidth=756&imdensity=2"
+          alt=""
+          width="66.6%"
+        />
+        <div className="side-img">
           <img
-            src="https://staticpages.mngbcn.com/mangogirls/images/306/img_2629.jpeg?&imwidth=756&imdensity=2"
+            src="https://staticpages.mngbcn.com/mangogirls/images/308/image00001.jpeg?&imwidth=756&imdensity=2"
+            width="100%"
             alt=""
-            width="66.6%"
           />
-          <div className="side-img">
-            <img
-              src="https://staticpages.mngbcn.com/mangogirls/images/308/image00001.jpeg?&imwidth=756&imdensity=2"
-              width="100%"
-              alt=""
-            />
-            <img
-              src="https://staticpages.mngbcn.com/mangogirls/images/299/mangoyyc-4.jpg?&imwidth=756&imdensity=2"
-              width="100%"
-              alt=""
-            />
-          </div>
+          <img
+            src="https://staticpages.mngbcn.com/mangogirls/images/299/mangoyyc-4.jpg?&imwidth=756&imdensity=2"
+            width="100%"
+            alt=""
+          />
         </div>
-        {/* <div className="img"> */}
+      </div>
+      {/* <div className="img"> */}
+      <img
+        src="https://staticpages.mngbcn.com/mangogirls/images/256/image2.jpeg?&imwidth=756&imdensity=2"
+        width="33.3%"
+        alt=""
+      />
+      <img
+        src="https://staticpages.mngbcn.com/mangogirls/images/257/image0_5.jpeg?&imwidth=756&imdensity=2"
+        alt=""
+        width="33.3%"
+      />
+      <img
+        src="https://staticpages.mngbcn.com/mangogirls/images/283/img_2448.jpeg?&imwidth=756&imdensity=2"
+        alt=""
+        width="33.3%"
+      />
+      {/* </div> */}
+      <div className="big-img">
         <img
-          src="https://staticpages.mngbcn.com/mangogirls/images/256/image2.jpeg?&imwidth=756&imdensity=2"
-          width="33.3%"
+          src="https://staticpages.mngbcn.com/mangogirls/images/164/photo_oct_22_10_06_27_am.jpg?&imwidth=756&imdensity=2"
           alt=""
+          width="66.6%"
         />
-        <img
-          src="https://staticpages.mngbcn.com/mangogirls/images/257/image0_5.jpeg?&imwidth=756&imdensity=2"
-          alt=""
-          width="33.3%"
-        />
-        <img
-          src="https://staticpages.mngbcn.com/mangogirls/images/283/img_2448.jpeg?&imwidth=756&imdensity=2"
-          alt=""
-          width="33.3%"
-        />
-        {/* </div> */}
-        <div className="big-img">
+        <div className="side-img">
           <img
-            src="https://staticpages.mngbcn.com/mangogirls/images/164/photo_oct_22_10_06_27_am.jpg?&imwidth=756&imdensity=2"
+            src="https://staticpages.mngbcn.com/mangogirls/images/168/img_3577.jpeg?&imwidth=756&imdensity=2"
+            width="100%"
             alt=""
-            width="66.6%"
           />
-          <div className="side-img">
-            <img
-              src="https://staticpages.mngbcn.com/mangogirls/images/168/img_3577.jpeg?&imwidth=756&imdensity=2"
-              width="100%"
-              alt=""
-            />
-            <img
-              src="https://staticpages.mngbcn.com/mangogirls/images/178/2_2.jpeg?&imwidth=756&imdensity=2"
-              width="100%"
-              alt=""
-            />
-          </div>
+          <img
+            src="https://staticpages.mngbcn.com/mangogirls/images/178/2_2.jpeg?&imwidth=756&imdensity=2"
+            width="100%"
+            alt=""
+          />
         </div>
       </div>
     </div>
+    // </div>
   );
 };
 
