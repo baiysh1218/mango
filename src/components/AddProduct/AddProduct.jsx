@@ -17,9 +17,8 @@ import "../AddProduct/AddProduct.css";
 import { useNavigate } from "react-router-dom";
 
 const AddProduct = () => {
-  const { createProduct, categories, getCategories } = useContext(
-    productsContext
-  );
+  const { createProduct, categories, getCategories } =
+    useContext(productsContext);
   const navigate = useNavigate();
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
@@ -45,49 +44,56 @@ const AddProduct = () => {
     createProduct(newProduct, navigate);
   }
   return (
+    // <div className="container">
     <div className="add-product-content-block">
       <div className="add-product-block">
-        <h2>Add Product</h2>
-        <input
-          className="add-product-inp"
-          value={title}
-          onChange={e => setTitle(e.target.value)}
-          type={"text"}
-          placeholder={"title"}
-        />
-        <input
-          className="add-product-inp"
-          value={description}
-          onChange={e => setDescription(e.target.value)}
-          type={"text"}
-          placeholder={"description"}
-        />
-        <input
-          className="add-product-inp"
-          value={price}
-          onChange={e => setPrice(e.target.value)}
-          type={"number"}
-          placeholder={"price"}
-        />
-        <p className="cotegory-content">Category</p>
-
-        <FormControl fullWidth className="add-content">
-          {/* <InputLabel id="demo-simple-select-label">Category</InputLabel> */}
-          <Select
-            className="add-cotegory"
-            labelId="demo-simple-select-label"
-            id="demo-simple-select"
-            value={category}
-            label="Category"
-            onChange={e => setCategory(e.target.value)}>
-            {categories.map(item => (
-              <MenuItem key={item.title} value={item.title}>
-                {item.title}
-              </MenuItem>
-            ))}
-          </Select>
-        </FormControl>
-
+        <div className="text-block">
+          <h2>Add Product</h2>
+        </div>
+        <div className="add-block-inp">
+          <input
+            className="add-product-inp"
+            value={title}
+            onChange={e => setTitle(e.target.value)}
+            type={"text"}
+            placeholder={"title"}
+          />
+          <input
+            className="add-product-inp"
+            value={description}
+            onChange={e => setDescription(e.target.value)}
+            type={"text"}
+            placeholder={"description"}
+          />
+          <input
+            className="add-product-inp"
+            value={price}
+            onChange={e => setPrice(e.target.value)}
+            type={"number"}
+            placeholder={"price"}
+          />
+        </div>
+        <div className="add-p">
+          <p className="cotegory-content">Category</p>
+        </div>
+        <div className="form-control-add">
+          <FormControl fullWidth className="add-content">
+            {/* <InputLabel id="demo-simple-select-label">Category</InputLabel> */}
+            <Select
+              className="add-cotegory"
+              labelId="demo-simple-select-label"
+              id="demo-simple-select"
+              value={category}
+              label="Category"
+              onChange={e => setCategory(e.target.value)}>
+              {categories.map(item => (
+                <MenuItem key={item.title} value={item.title}>
+                  {item.title}
+                </MenuItem>
+              ))}
+            </Select>
+          </FormControl>
+        </div>
         <Box className="inp-img">
           <IconButton
             color="primary"
@@ -103,11 +109,14 @@ const AddProduct = () => {
           </IconButton>
           {image ? <Typography variant="span">{image.name}</Typography> : null}
         </Box>
-        <button className="add-peoduct-btn" onClick={handleSave}>
-          add product
-        </button>
+        <div className="add-product-btn-block">
+          <button className="add-peoduct-btn" onClick={handleSave}>
+            add product
+          </button>
+        </div>
       </div>
     </div>
+    // </div>
   );
 };
 
