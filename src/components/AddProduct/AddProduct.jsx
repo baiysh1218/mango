@@ -5,7 +5,9 @@ import {
   InputLabel,
   MenuItem,
   Select,
+  TextField,
   Typography,
+  useRadioGroup,
 } from "@mui/material";
 
 import React, { useEffect } from "react";
@@ -17,7 +19,7 @@ import "../AddProduct/AddProduct.css";
 import { useNavigate } from "react-router-dom";
 
 const AddProduct = () => {
-  const { createProduct, categories, getCategories } =
+  const { createProduct, categories, getCategories, products } =
     useContext(productsContext);
   const navigate = useNavigate();
   const [title, setTitle] = useState("");
@@ -25,6 +27,7 @@ const AddProduct = () => {
   const [price, setPrice] = useState(0);
   const [category, setCategory] = useState("");
   const [image, setImage] = useState(null);
+
   // const [image2, setImage2] = useState(null);
   // const [image3, setImage3] = useState(null);
   // const [image4, setImage4] = useState(null);
@@ -32,7 +35,7 @@ const AddProduct = () => {
   useEffect(() => {
     getCategories();
   }, []);
-  console.log(categories);
+  // console.log(products);
 
   function handleSave() {
     let newProduct = new FormData();
@@ -41,59 +44,55 @@ const AddProduct = () => {
     newProduct.append("price", price);
     newProduct.append("category", category);
     newProduct.append("image", image);
+
     createProduct(newProduct, navigate("/products-list"));
   }
   return (
     // <div className="container">
     <div className="add-product-content-block">
       <div className="add-product-block">
-        <div className="text-block">
-          <h2>Add Product</h2>
-        </div>
-        <div className="add-block-inp">
-          <input
-            className="add-product-inp"
-            value={title}
-            onChange={e => setTitle(e.target.value)}
-            type={"text"}
-            placeholder={"title"}
-          />
-          <input
-            className="add-product-inp"
-            value={description}
-            onChange={e => setDescription(e.target.value)}
-            type={"text"}
-            placeholder={"description"}
-          />
-          <input
-            className="add-product-inp"
-            value={price}
-            onChange={e => setPrice(e.target.value)}
-            type={"number"}
-            placeholder={"price"}
-          />
-        </div>
-        <div className="add-p">
-          <p className="cotegory-content">Category</p>
-        </div>
-        <div className="form-control-add">
-          <FormControl fullWidth className="add-content">
-            {/* <InputLabel id="demo-simple-select-label">Category</InputLabel> */}
-            <Select
-              className="add-cotegory"
-              labelId="demo-simple-select-label"
-              id="demo-simple-select"
-              value={category}
-              label="Category"
-              onChange={e => setCategory(e.target.value)}>
-              {categories.map(item => (
-                <MenuItem key={item.title} value={item.title}>
-                  {item.title}
-                </MenuItem>
-              ))}
-            </Select>
-          </FormControl>
-        </div>
+        <h2>Add Product</h2>
+        <input
+          className="add-product-inp"
+          value={title}
+          onChange={e => setTitle(e.target.value)}
+          type={"text"}
+          placeholder={"title"}
+        />
+        <input
+          className="add-product-inp"
+          value={description}
+          onChange={e => setDescription(e.target.value)}
+          type={"text"}
+          placeholder={"description"}
+        />
+        <input
+          className="add-product-inp"
+          value={price}
+          onChange={e => setPrice(e.target.value)}
+          type={"number"}
+          placeholder={"price"}
+        />
+
+        <p className="cotegory-content">Category</p>
+
+        <FormControl fullWidth className="add-content">
+          {/* <InputLabel id="demo-simple-select-label">Category</InputLabel> */}
+          <Select
+            className="add-cotegory"
+            labelId="demo-simple-select-label"
+            id="demo-simple-select"
+            value={category}
+            label="Category"
+            onChange={e => setCategory(e.target.value)}>
+            {categories.map(item => (
+              <MenuItem key={item.title} value={item.title}>
+                {item.title}
+              </MenuItem>
+            ))}
+          </Select>
+        </FormControl>
+
         <Box className="inp-img">
           <IconButton
             color="primary"

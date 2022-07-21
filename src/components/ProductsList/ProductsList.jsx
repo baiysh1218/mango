@@ -28,7 +28,7 @@ const ProductsList = () => {
   const [currentPage, setCurrentPage] = useState(
     searchParams.get("page") ? +searchParams.get("page") : 1
   );
-
+  console.log(products);
   useEffect(() => {
     getProducts();
   }, []);
