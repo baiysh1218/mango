@@ -43,53 +43,54 @@ const ProductsList = () => {
 
   return (
     // <div className="container">
-      <div className="product-list-block">
-        <div className="products-filter-price">
-          <input
-            className="all-product-input0-search"
-            onChange={e => setSearch(e.target.value)}
-            placeholder="search"
-          />
-          <Slider
-            color="secondary"
-            className="slider-all-product"
-            getAriaLabel={() => "Temperature range"}
-            value={price}
-            onChange={(e, value) => {
-              console.log(value);
-              setPrice(value);
-            }}
-            min={1}
-            max={500}
-            step={10}
-            valueLabelDisplay="auto"
-          />
-        </div>
-        {products.map(elem => (
-          <div key={elem.id} elem={elem}>
-            {elem.user ? (
-              <button onClick={() => navigate("/add-product")}>
-                add product
-              </button>
-            ) : null}
-          </div>
-        ))}
-
-        {products.map(item => (
-          <ProductsCard key={item.id} item={item} />
-        ))}
-        <div className="pagination">
-          <Pagination
-            page={currentPage}
-            onChange={(e, page) => setCurrentPage(page)}
-            count={pages}
-            // count={10}
-            variant="outlined"
-            color="secondary"
-          />
-        </div>
+    <div className="product-list-block">
+      <div className="products-filter-price">
+        <input
+          className="all-product-input0-search"
+          onChange={e => setSearch(e.target.value)}
+          placeholder="search"
+        />
+        <Slider
+          color="secondary"
+          className="slider-all-product"
+          getAriaLabel={() => "Temperature range"}
+          value={price}
+          onChange={(e, value) => {
+            console.log(value);
+            setPrice(value);
+          }}
+          min={1}
+          max={500}
+          step={10}
+          valueLabelDisplay="auto"
+        />
       </div>
+      {products.map(elem => (
+        <div key={elem.id} elem={elem}>
+          {elem.user ? (
+            <button onClick={() => navigate("/add-product")}>
+              add product
+            </button>
+          ) : null}
+        </div>
+      ))}
+
+      {products.map(item => (
+        <ProductsCard key={item.id} item={item} />
+      ))}
+      <div className="pagination">
+        <Pagination
+          page={currentPage}
+          onChange={(e, page) => setCurrentPage(page)}
+          count={pages}
+          // count={10}
+          variant="outlined"
+          color="secondary"
+        />
+      </div>
+    </div>
     // </div>
+  );
 };
 
 export default ProductsList;
