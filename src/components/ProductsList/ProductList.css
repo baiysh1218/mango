@@ -1,0 +1,9 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+}
+.product-list-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
