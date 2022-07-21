@@ -34,65 +34,67 @@ const Register = () => {
   }
 
   return (
-    // <div className="container">
-      <div className="regiseter-block">
-        <div className="register-teg">
-          <h5 className="rgister-tag">Register</h5>
-          {error ? (
-            <div>
-              {error.map((item, index) => (
-                <Alert severity="error" key={item + index}>
-                  {item}
-                </Alert>
-              ))}
+    <div className="container">
+      <div className="register-width">
+        <div className="regiseter-block">
+          <div className="register-teg">
+            <h5 className="rgister-tag">Register</h5>
+            {error ? (
+              <div>
+                {error.map((item, index) => (
+                  <Alert severity="error" key={item + index}>
+                    {item}
+                  </Alert>
+                ))}
+              </div>
+            ) : null}
+            <div className="register-block">
+              <input
+                className="register-inp"
+                value={email}
+                onChange={e => setEmail(e.target.value)}
+                variant="outlined"
+                placeholder="Email"
+              />
+              <input
+                className="register-inp"
+                value={name}
+                onChange={e => setName(e.target.value)}
+                variant="outlined"
+                placeholder="Name"
+              />
+              <input
+                className="register-inp"
+                value={password}
+                onChange={e => setPassword(e.target.value)}
+                variant="outlined"
+                placeholder="Password"
+              />
+              <input
+                className="register-inp"
+                value={passwordConfirm}
+                onChange={e => setPasswordConfirm(e.target.value)}
+                variant="outlined"
+                placeholder="Password confirmation"
+              />
+              <button
+                className="register-btn"
+                onClick={handleSave}
+                variant="outlined">
+                Register
+              </button>
+              <span className="span">если уже есть аккаунт войдите</span>
+              <button
+                className="register-btn"
+                onClick={() => navigate("/login")}
+                variant="outlined">
+                login
+              </button>
             </div>
-          ) : null}
-          <div className="register-block">
-            <input
-              className="register-inp"
-              value={email}
-              onChange={e => setEmail(e.target.value)}
-              variant="outlined"
-              placeholder="Email"
-            />
-            <input
-              className="register-inp"
-              value={name}
-              onChange={e => setName(e.target.value)}
-              variant="outlined"
-              placeholder="Name"
-            />
-            <input
-              className="register-inp"
-              value={password}
-              onChange={e => setPassword(e.target.value)}
-              variant="outlined"
-              placeholder="Password"
-            />
-            <input
-              className="register-inp"
-              value={passwordConfirm}
-              onChange={e => setPasswordConfirm(e.target.value)}
-              variant="outlined"
-              placeholder="Password confirmation"
-            />
-            <button
-              className="register-btn"
-              onClick={handleSave}
-              variant="outlined">
-              Register
-            </button>
-            <span>если уже есть аккаунт войдите</span>
-            <button
-              className="register-btn"
-              onClick={() => navigate("/login")}
-              variant="outlined">
-              login
-            </button>
           </div>
         </div>
       </div>
-    // </div>
+    </div>
   );
 };
 
